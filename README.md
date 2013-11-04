@@ -1,4 +1,13 @@
-NSO-App
-=======
+NSO Application
+CSC 212 Term Project
 
-NSO iOS Application for CSC 212
+Waypoints: 
+(Schedule goes here)
+
+ToDo:
+(To-do list goes here)
+
+Bugs:
+(Found bugs go here)
+
+

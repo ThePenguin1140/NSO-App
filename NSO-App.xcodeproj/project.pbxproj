@@ -292,6 +292,7 @@
 				7C62DCFC182AB09B0003AD91 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

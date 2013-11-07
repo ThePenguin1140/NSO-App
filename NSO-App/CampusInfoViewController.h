@@ -9,5 +9,6 @@
 #import <UIKit/UIKit.h>
 
 @interface CampusInfoViewController : UIViewController
-
+@property (strong, nonatomic) IBOutlet UIWebView *webView;
+- (IBAction)segmentControlAction:(id)sender;
 @end

@@ -46,6 +46,7 @@
 {
     // Called when the application is about to terminate. Save data if appropriate. See also applicationDidEnterBackground:.
 }
+<<<<<<< HEAD
 
 - (void)saveContext
 {
@@ -61,10 +62,14 @@
     }
 }
 
+=======
+/*
+>>>>>>> 8b968058ba8fdff823f56d5244e390e57f3e2ccb
 - (void)create {
     
     //Get context
     NSManagedObjectContext *context = [self managedObjectContext];
+<<<<<<< HEAD
     if(!context){
         NSLog(@"Context error");
     }
@@ -208,4 +213,12 @@
     return [[[NSFileManager defaultManager] URLsForDirectory:NSDocumentDirectory inDomains:NSUserDomainMask] lastObject];
 }
 
+=======
+    
+    //create and onvifgure the day entity and set it's attributes
+    Day *day = [NSEntityDescription insertNewObjectForEntityForName:@"Day" inManagedObjectContext:context];
+    [day setName]
+}
+ */
+>>>>>>> 8b968058ba8fdff823f56d5244e390e57f3e2ccb
 @end

@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="2.0" toolsVersion="2844" systemVersion="11G63" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" initialViewController="2">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="2.0" toolsVersion="2844" systemVersion="12F45" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" initialViewController="2">
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="1930"/>
     </dependencies>
@@ -100,7 +100,7 @@
             </objects>
             <point key="canvasLocation" x="-136" y="-1106"/>
         </scene>
-        <!--Map View Controller - Item-->
+        <!--Map View Controller - Campus Map-->
         <scene sceneID="y4W-mt-vVQ">
             <objects>
                 <viewController id="3sY-td-oA3" customClass="MapViewController" sceneMemberID="viewController">
@@ -120,14 +120,14 @@
                             <constraint firstItem="T0S-zN-rml" firstAttribute="leading" secondItem="agG-9U-uJy" secondAttribute="leading" type="default" id="bdg-50-WG5"/>
                         </constraints>
                     </view>
-                    <tabBarItem key="tabBarItem" title="Item" id="1Sr-AN-nH0"/>
+                    <tabBarItem key="tabBarItem" title="Campus Map" image="mapIcon.png" id="1Sr-AN-nH0"/>
                     <connections>
                         <outlet property="webView" destination="T0S-zN-rml" id="966-NJ-uS7"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="XdU-Oc-A0i" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-123" y="-445"/>
+            <point key="canvasLocation" x="705" y="-185"/>
         </scene>
         <!--Table View Controller - Item-->
         <scene sceneID="WCd-TK-JJN">
@@ -198,11 +198,13 @@
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <subviews>
                             <segmentedControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="6QL-M7-ePl">
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="307" id="vO6-Ss-k5a"/>
+                                </constraints>
                                 <segments>
                                     <segment title="Gym"/>
                                     <segment title="Library"/>
                                     <segment title="Wave"/>
-                                    <segment title="Map"/>
                                 </segments>
                                 <connections>
                                     <action selector="segmentControlAction:" destination="bc0-Ut-oJR" eventType="valueChanged" id="QfY-Ba-Cxo"/>
@@ -217,18 +219,17 @@
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                         <constraints>
-                            <constraint firstItem="3o7-ZL-5U7" firstAttribute="leading" secondItem="1Sb-cD-tcJ" secondAttribute="leading" constant="20" symbolic="YES" type="default" id="4xh-OG-ft3"/>
                             <constraint firstItem="6QL-M7-ePl" firstAttribute="centerX" secondItem="1Sb-cD-tcJ" secondAttribute="centerX" type="default" id="QQq-Nh-N0f"/>
                             <constraint firstItem="6QL-M7-ePl" firstAttribute="top" secondItem="1Sb-cD-tcJ" secondAttribute="top" constant="20" symbolic="YES" type="default" id="Y8e-sr-cfz"/>
                             <constraint firstItem="3o7-ZL-5U7" firstAttribute="top" secondItem="6QL-M7-ePl" secondAttribute="bottom" constant="8" symbolic="YES" type="default" id="c3W-aj-C63"/>
-                            <constraint firstItem="6QL-M7-ePl" firstAttribute="centerX" secondItem="3o7-ZL-5U7" secondAttribute="centerX" type="default" id="hgm-Wn-yLb"/>
+                            <constraint firstItem="3o7-ZL-5U7" firstAttribute="leading" secondItem="6QL-M7-ePl" secondAttribute="leading" type="default" id="jmN-gZ-XuB"/>
+                            <constraint firstItem="6QL-M7-ePl" firstAttribute="trailing" secondItem="3o7-ZL-5U7" secondAttribute="trailing" type="default" id="z0e-nR-5sY"/>
                         </constraints>
                     </view>
                     <tabBarItem key="tabBarItem" title="Campus Info" image="campusInfo.png" id="CBS-pt-IZ9"/>
                     <connections>
                         <outlet property="webViewGym" destination="3o7-ZL-5U7" id="8gV-Fs-Ho2"/>
                         <outlet property="webViewLibrary" destination="3o7-ZL-5U7" id="1oI-2q-wjo"/>
-                        <outlet property="webViewMap" destination="3o7-ZL-5U7" id="KJi-hy-277"/>
                         <outlet property="webViewWave" destination="3o7-ZL-5U7" id="iGJ-1x-so1"/>
                     </connections>
                 </viewController>
@@ -240,31 +241,8 @@
     <resources>
         <image name="NSOWelcome.jpg" width="1000" height="288"/>
         <image name="campusInfo.png" width="30" height="30"/>
+        <image name="mapIcon.png" width="30" height="30"/>
     </resources>
-    <classes>
-        <class className="CampusInfoViewController" superclassName="UIViewController">
-            <source key="sourceIdentifier" type="project" relativePath="./Classes/CampusInfoViewController.h"/>
-            <relationships>
-                <relationship kind="action" name="segmentControlAction:"/>
-                <relationship kind="outlet" name="webViewGym" candidateClass="UIWebView"/>
-                <relationship kind="outlet" name="webViewLibrary" candidateClass="UIWebView"/>
-                <relationship kind="outlet" name="webViewMap" candidateClass="UIWebView"/>
-                <relationship kind="outlet" name="webViewWave" candidateClass="UIWebView"/>
-            </relationships>
-        </class>
-        <class className="MapViewController" superclassName="UIViewController">
-            <source key="sourceIdentifier" type="project" relativePath="./Classes/MapViewController.h"/>
-            <relationships>
-                <relationship kind="outlet" name="webView" candidateClass="UIWebView"/>
-            </relationships>
-        </class>
-        <class className="NSLayoutConstraint" superclassName="NSObject">
-            <source key="sourceIdentifier" type="project" relativePath="./Classes/NSLayoutConstraint.h"/>
-        </class>
-        <class className="ViewController" superclassName="UIViewController">
-            <source key="sourceIdentifier" type="project" relativePath="./Classes/ViewController.h"/>
-        </class>
-    </classes>
     <simulatedMetricsContainer key="defaultSimulatedMetrics">
         <simulatedStatusBarMetrics key="statusBar"/>
         <simulatedOrientationMetrics key="orientation"/>

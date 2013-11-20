@@ -7,6 +7,8 @@
 //
 
 #import "AppDelegate.h"
+#import "Day.h"
+#import "Event.h"
 
 @implementation AppDelegate
 
@@ -43,4 +45,13 @@
     // Called when the application is about to terminate. Save data if appropriate. See also applicationDidEnterBackground:.
 }
 
+- (void)create {
+    
+    //Get context
+    NSManagedObjectContext *context = [self managedObjectContext];
+    
+    //create and onvifgure the day entity and set it's attributes
+    Day *day = [NSEntityDescription insertNewObjectForEntityForName:@"Day" inManagedObjectContext:context];
+    [day setName]
+}
 @end

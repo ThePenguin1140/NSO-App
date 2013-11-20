@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
-<model name="" userDefinedModelVersionIdentifier="" type="com.apple.IDECoreDataModeler.DataModel" documentVersion="1.0" lastSavedToolsVersion="1811" systemVersion="11G63" minimumToolsVersion="Xcode 4.3" macOSVersion="Automatic" iOSVersion="Automatic">
-    <entity name="Day" representedClassName="Day" syncable="YES">
+<model name="" userDefinedModelVersionIdentifier="" type="com.apple.IDECoreDataModeler.DataModel" documentVersion="1.0" lastSavedToolsVersion="1811" systemVersion="11G63" minimumToolsVersion="Automatic" macOSVersion="Automatic" iOSVersion="Automatic">
+    <entity name="Day" representedClassName="Day" isAbstract="YES" syncable="YES">
         <attribute name="date" optional="YES" attributeType="String" syncable="YES"/>
         <attribute name="name" optional="YES" attributeType="String" syncable="YES"/>
         <relationship name="event" optional="YES" toMany="YES" minCount="1" deletionRule="Nullify" destinationEntity="Event" inverseName="day" inverseEntity="Event" syncable="YES"/>
     </entity>
-    <entity name="Event" representedClassName="Event" syncable="YES">
+    <entity name="Event" representedClassName="Event" isAbstract="YES" syncable="YES">
         <attribute name="eventDescription" optional="YES" attributeType="String" syncable="YES"/>
         <attribute name="eventLocation" optional="YES" attributeType="String" syncable="YES"/>
         <attribute name="eventTime" optional="YES" attributeType="String" syncable="YES"/>

@@ -23,6 +23,9 @@
 		7C62DD14182ABFA00003AD91 /* README in Resources */ = {isa = PBXBuildFile; fileRef = 7C62DD13182ABFA00003AD91 /* README */; };
 		7C62DD17182AC32A0003AD91 /* Schedule.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 7C62DD15182AC32A0003AD91 /* Schedule.xcdatamodeld */; };
 		7C653645183D29B70009953E /* MapViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 7C653644183D29B70009953E /* MapViewController.m */; };
+		7C653661183D38520009953E /* Event.m in Sources */ = {isa = PBXBuildFile; fileRef = 7C653660183D38520009953E /* Event.m */; };
+		7C653664183D38530009953E /* Day.m in Sources */ = {isa = PBXBuildFile; fileRef = 7C653663183D38530009953E /* Day.m */; };
+		7C653666183D3A0F0009953E /* CoreData.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7C653665183D3A0F0009953E /* CoreData.framework */; };
 		810FA62C183994180094E771 /* NSOWelcome.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 810FA62B183994180094E771 /* NSOWelcome.jpg */; };
 		810FA633183997C00094E771 /* waveMenu.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 810FA632183997C00094E771 /* waveMenu.jpg */; };
 		810FA6351839A1B40094E771 /* campusMap.pdf in Resources */ = {isa = PBXBuildFile; fileRef = 810FA6341839A1B40094E771 /* campusMap.pdf */; };
@@ -52,9 +55,14 @@
 		7C62DD0E182ABCDE0003AD91 /* CampusInfoViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CampusInfoViewController.m; sourceTree = "<group>"; };
 		7C62DD11182ABE450003AD91 /* webView1.html */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.html; path = webView1.html; sourceTree = "<group>"; };
 		7C62DD13182ABFA00003AD91 /* README */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = README; sourceTree = "<group>"; };
-		7C62DD16182AC32A0003AD91 /* Schedule.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Schedule.xcdatamodel; sourceTree = "<group>"; };
+		7C62DD16182AC32A0003AD91 /* Schedule.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; name = Schedule.xcdatamodel; path = "NSO-App/Schedule.xcdatamodeld/Schedule.xcdatamodel"; sourceTree = SOURCE_ROOT; };
 		7C653643183D29B70009953E /* MapViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MapViewController.h; sourceTree = "<group>"; };
 		7C653644183D29B70009953E /* MapViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MapViewController.m; sourceTree = "<group>"; };
+		7C65365F183D38520009953E /* Event.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = Event.h; path = ../Event.h; sourceTree = "<group>"; };
+		7C653660183D38520009953E /* Event.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = Event.m; path = ../Event.m; sourceTree = "<group>"; };
+		7C653662183D38530009953E /* Day.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = Day.h; path = ../Day.h; sourceTree = "<group>"; };
+		7C653663183D38530009953E /* Day.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = Day.m; path = ../Day.m; sourceTree = "<group>"; };
+		7C653665183D3A0F0009953E /* CoreData.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreData.framework; path = System/Library/Frameworks/CoreData.framework; sourceTree = SDKROOT; };
 		810FA62B183994180094E771 /* NSOWelcome.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = NSOWelcome.jpg; sourceTree = "<group>"; };
 		810FA632183997C00094E771 /* waveMenu.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = waveMenu.jpg; sourceTree = "<group>"; };
 		810FA6341839A1B40094E771 /* campusMap.pdf */ = {isa = PBXFileReference; lastKnownFileType = image.pdf; path = campusMap.pdf; sourceTree = "<group>"; };
@@ -68,6 +76,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				7C653666183D3A0F0009953E /* CoreData.framework in Frameworks */,
 				7C62DCDB182AB09B0003AD91 /* UIKit.framework in Frameworks */,
 				7C62DCDD182AB09B0003AD91 /* Foundation.framework in Frameworks */,
 				7C62DCDF182AB09B0003AD91 /* CoreGraphics.framework in Frameworks */,
@@ -97,6 +106,7 @@
 		7C62DCD9182AB09B0003AD91 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				7C653665183D3A0F0009953E /* CoreData.framework */,
 				7C62DCDA182AB09B0003AD91 /* UIKit.framework */,
 				7C62DCDC182AB09B0003AD91 /* Foundation.framework */,
 				7C62DCDE182AB09B0003AD91 /* CoreGraphics.framework */,
@@ -107,6 +117,10 @@
 		7C62DCE0182AB09B0003AD91 /* NSO-App */ = {
 			isa = PBXGroup;
 			children = (
+				7C653662183D38530009953E /* Day.h */,
+				7C653663183D38530009953E /* Day.m */,
+				7C65365F183D38520009953E /* Event.h */,
+				7C653660183D38520009953E /* Event.m */,
 				7C62DCE9182AB09B0003AD91 /* AppDelegate.h */,
 				7C62DCEA182AB09B0003AD91 /* AppDelegate.m */,
 				7C62DCF2182AB09B0003AD91 /* MainStoryboard.storyboard */,
@@ -224,6 +238,8 @@
 				7C62DD0F182ABCDE0003AD91 /* CampusInfoViewController.m in Sources */,
 				7C62DD17182AC32A0003AD91 /* Schedule.xcdatamodeld in Sources */,
 				7C653645183D29B70009953E /* MapViewController.m in Sources */,
+				7C653661183D38520009953E /* Event.m in Sources */,
+				7C653664183D38530009953E /* Day.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -353,6 +369,7 @@
 			currentVersion = 7C62DD16182AC32A0003AD91 /* Schedule.xcdatamodel */;
 			path = Schedule.xcdatamodeld;
 			sourceTree = "<group>";
+			usesTabs = 0;
 			versionGroupType = wrapper.xcdatamodel;
 		};
 /* End XCVersionGroup section */

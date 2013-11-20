@@ -13,7 +13,7 @@
 @end
 
 @implementation CampusInfoViewController
-@synthesize webView;
+@synthesize webViewGym, webViewLibrary, webViewMap, webViewWave;
 
 - (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
 {
@@ -34,9 +34,8 @@
     //Implement path getting things where the path to html file is
     // relative!
     
-    NSURL *url = [NSURL URLWithString:@"/Users/cs212/Desktop/Project/NSO-App/webView1.html"];
-    NSURLRequest *urlRequest = [NSURLRequest requestWithURL:url];
-    [webView loadRequest:urlRequest];
+    [webViewGym loadRequest:[NSURLRequest requestWithURL: [NSURL URLWithString:@"http://ar.upei.ca/hours-operation"]]];
+    webViewGym.scalesPageToFit = YES;
 }
 
 - (void)didReceiveMemoryWarning
@@ -47,19 +46,52 @@
 
 - (IBAction)segmentControlAction:(id)sender {
     UISegmentedControl *segControl = (UISegmentedControl *)sender;
+    
     int selectedValue = segControl.selectedSegmentIndex;
     switch (selectedValue) {
         case 0:
+        {
             NSLog(@"1");
+            
+            [webViewGym loadRequest:[NSURLRequest requestWithURL: [NSURL URLWithString:@"http://ar.upei.ca/hours-operation"]]];
+            webViewGym.scalesPageToFit = YES;
+
+        }
             break;
         case 1:
+        {
             NSLog(@"2");
+            [webViewLibrary loadRequest:[NSURLRequest requestWithURL: [NSURL URLWithString:@"http://library.upei.ca/hours"]]];
+            webViewLibrary.scalesPageToFit = YES;
+
             break;
+        }
         case 2:
+        {
             NSLog(@"3");
+            NSString *path = [[NSBundle mainBundle] pathForResource:@"menu" ofType:@"pdf"];
+            NSURL *targetURL = [NSURL fileURLWithPath:path];
+            NSURLRequest *request = [NSURLRequest requestWithURL:targetURL];
+            [webViewWave loadRequest:request];
+            webViewWave.scalesPageToFit = YES;
+
             break;
+        }
+        case 3:
+        {
+            NSLog(@"3");
+            NSString *path = [[NSBundle mainBundle] pathForResource:@"campusMap1" ofType:@"pdf"];
+            NSURL *targetURL = [NSURL fileURLWithPath:path];
+            NSURLRequest *request = [NSURLRequest requestWithURL:targetURL];
+            [webViewMap loadRequest:request];
+            webViewMap.scalesPageToFit = YES;
+            break;
+        }
+
+            
         default:
             break;
     }
 }
+
 @end

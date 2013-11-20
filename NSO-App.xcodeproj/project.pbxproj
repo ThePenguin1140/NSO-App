@@ -22,6 +22,12 @@
 		7C62DD12182ABE450003AD91 /* webView1.html in Resources */ = {isa = PBXBuildFile; fileRef = 7C62DD11182ABE450003AD91 /* webView1.html */; };
 		7C62DD14182ABFA00003AD91 /* README in Resources */ = {isa = PBXBuildFile; fileRef = 7C62DD13182ABFA00003AD91 /* README */; };
 		7C62DD17182AC32A0003AD91 /* Schedule.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 7C62DD15182AC32A0003AD91 /* Schedule.xcdatamodeld */; };
+		810FA62C183994180094E771 /* NSOWelcome.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 810FA62B183994180094E771 /* NSOWelcome.jpg */; };
+		810FA633183997C00094E771 /* waveMenu.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 810FA632183997C00094E771 /* waveMenu.jpg */; };
+		810FA6351839A1B40094E771 /* campusMap.pdf in Resources */ = {isa = PBXBuildFile; fileRef = 810FA6341839A1B40094E771 /* campusMap.pdf */; };
+		810FA6371839A60F0094E771 /* menu.pdf in Resources */ = {isa = PBXBuildFile; fileRef = 810FA6361839A60F0094E771 /* menu.pdf */; };
+		810FA6391839AF140094E771 /* campusInfo.png in Resources */ = {isa = PBXBuildFile; fileRef = 810FA6381839AF140094E771 /* campusInfo.png */; };
+		810FA63B1839B0640094E771 /* campusMap1.pdf in Resources */ = {isa = PBXBuildFile; fileRef = 810FA63A1839B0640094E771 /* campusMap1.pdf */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -46,6 +52,12 @@
 		7C62DD11182ABE450003AD91 /* webView1.html */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.html; path = webView1.html; sourceTree = "<group>"; };
 		7C62DD13182ABFA00003AD91 /* README */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = README; sourceTree = "<group>"; };
 		7C62DD16182AC32A0003AD91 /* Schedule.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Schedule.xcdatamodel; sourceTree = "<group>"; };
+		810FA62B183994180094E771 /* NSOWelcome.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = NSOWelcome.jpg; sourceTree = "<group>"; };
+		810FA632183997C00094E771 /* waveMenu.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = waveMenu.jpg; sourceTree = "<group>"; };
+		810FA6341839A1B40094E771 /* campusMap.pdf */ = {isa = PBXFileReference; lastKnownFileType = image.pdf; path = campusMap.pdf; sourceTree = "<group>"; };
+		810FA6361839A60F0094E771 /* menu.pdf */ = {isa = PBXFileReference; lastKnownFileType = image.pdf; path = menu.pdf; sourceTree = "<group>"; };
+		810FA6381839AF140094E771 /* campusInfo.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = campusInfo.png; sourceTree = "<group>"; };
+		810FA63A1839B0640094E771 /* campusMap1.pdf */ = {isa = PBXFileReference; lastKnownFileType = image.pdf; path = campusMap1.pdf; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -115,6 +127,12 @@
 				7C62DCE8182AB09B0003AD91 /* NSO-App-Prefix.pch */,
 				7C62DCEC182AB09B0003AD91 /* Default.png */,
 				7C62DCEE182AB09B0003AD91 /* Default@2x.png */,
+				810FA632183997C00094E771 /* waveMenu.jpg */,
+				810FA6361839A60F0094E771 /* menu.pdf */,
+				810FA6381839AF140094E771 /* campusInfo.png */,
+				810FA6341839A1B40094E771 /* campusMap.pdf */,
+				810FA63A1839B0640094E771 /* campusMap1.pdf */,
+				810FA62B183994180094E771 /* NSOWelcome.jpg */,
 				7C62DCF0182AB09B0003AD91 /* Default-568h@2x.png */,
 				7C62DD11182ABE450003AD91 /* webView1.html */,
 			);
@@ -179,6 +197,12 @@
 				7C62DCF4182AB09B0003AD91 /* MainStoryboard.storyboard in Resources */,
 				7C62DD12182ABE450003AD91 /* webView1.html in Resources */,
 				7C62DD14182ABFA00003AD91 /* README in Resources */,
+				810FA62C183994180094E771 /* NSOWelcome.jpg in Resources */,
+				810FA633183997C00094E771 /* waveMenu.jpg in Resources */,
+				810FA6351839A1B40094E771 /* campusMap.pdf in Resources */,
+				810FA6371839A60F0094E771 /* menu.pdf in Resources */,
+				810FA6391839AF140094E771 /* campusInfo.png in Resources */,
+				810FA63B1839B0640094E771 /* campusMap1.pdf in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

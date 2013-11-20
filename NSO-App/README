@@ -1,12 +1,28 @@
 NSO Application
 CSC 212 Term Project
 
-Tentative Project Schedule:Week 1: Oct 27 – Nov 2•	layout set up•	campus info tab complete•	NSO welcome page complete•	NSO Events page completeWeek 2: Nov 3 – Nov 9•	Screen 2 contacts completeWeek 3: Nov 10 – Nov 16•	Determine where we are at with event schedule and determine if it is a feasible option•	Debug and final testing
+Tentative Project Schedule:
+
+Week 1: Oct 27 – Nov 2
+•	layout set up
+•	campus info tab complete
+•	NSO welcome page complete
+•	NSO Events page complete
+
+Week 2: Nov 3 – Nov 9
+•	Screen 2 contacts complete
+
+Week 3: Nov 10 – Nov 16
+•	Determine where we are at with event schedule and determine if it is a feasible option
+•	Debug and final testing
 
 ToDo:
 -Add project files [DONE]
 -Add waypoints from project description to README
 -Implement path getting things in CAMPUSINFOVIEWCONTROLLER.M where the path to the html file is relative!
+-Add database entries for the contacts
+-Add contacts to data base in -(void)create in AppDelegate.m
+-ViewControllers need to be named!
 
 Bugs:
 (Found bugs go here)

@@ -2,6 +2,7 @@
 <model name="" userDefinedModelVersionIdentifier="" type="com.apple.IDECoreDataModeler.DataModel" documentVersion="1.0" lastSavedToolsVersion="1811" systemVersion="11G63" minimumToolsVersion="Xcode 4.3" macOSVersion="Automatic" iOSVersion="Automatic">
     <entity name="Day" representedClassName="Day" syncable="YES">
         <attribute name="date" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="name" optional="YES" attributeType="String" syncable="YES"/>
         <relationship name="event" optional="YES" toMany="YES" minCount="1" deletionRule="Nullify" destinationEntity="Event" inverseName="day" inverseEntity="Event" syncable="YES"/>
     </entity>
     <entity name="Event" representedClassName="Event" syncable="YES">
@@ -12,7 +13,7 @@
         <relationship name="day" optional="YES" minCount="1" maxCount="1" deletionRule="Nullify" destinationEntity="Day" inverseName="event" inverseEntity="Day" syncable="YES"/>
     </entity>
     <elements>
-        <element name="Day" positionX="-47" positionY="87" width="128" height="75"/>
+        <element name="Day" positionX="-47" positionY="87" width="128" height="90"/>
         <element name="Event" positionX="115" positionY="162" width="128" height="120"/>
     </elements>
 </model>

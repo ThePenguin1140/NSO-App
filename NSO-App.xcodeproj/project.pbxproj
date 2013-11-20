@@ -23,8 +23,6 @@
 		7C62DD14182ABFA00003AD91 /* README in Resources */ = {isa = PBXBuildFile; fileRef = 7C62DD13182ABFA00003AD91 /* README */; };
 		7C62DD17182AC32A0003AD91 /* Schedule.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 7C62DD15182AC32A0003AD91 /* Schedule.xcdatamodeld */; };
 		7C653645183D29B70009953E /* MapViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 7C653644183D29B70009953E /* MapViewController.m */; };
-		7C65364C183D2AA30009953E /* Event.m in Sources */ = {isa = PBXBuildFile; fileRef = 7C65364B183D2AA30009953E /* Event.m */; };
-		7C65364F183D2AB20009953E /* Day.m in Sources */ = {isa = PBXBuildFile; fileRef = 7C65364E183D2AB20009953E /* Day.m */; };
 		810FA62C183994180094E771 /* NSOWelcome.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 810FA62B183994180094E771 /* NSOWelcome.jpg */; };
 		810FA633183997C00094E771 /* waveMenu.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 810FA632183997C00094E771 /* waveMenu.jpg */; };
 		810FA6351839A1B40094E771 /* campusMap.pdf in Resources */ = {isa = PBXBuildFile; fileRef = 810FA6341839A1B40094E771 /* campusMap.pdf */; };
@@ -59,10 +57,6 @@
 		7C62DD16182AC32A0003AD91 /* Schedule.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Schedule.xcdatamodel; sourceTree = "<group>"; };
 		7C653643183D29B70009953E /* MapViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MapViewController.h; sourceTree = "<group>"; };
 		7C653644183D29B70009953E /* MapViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MapViewController.m; sourceTree = "<group>"; };
-		7C65364A183D2AA30009953E /* Event.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Event.h; sourceTree = "<group>"; };
-		7C65364B183D2AA30009953E /* Event.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Event.m; sourceTree = "<group>"; };
-		7C65364D183D2AB20009953E /* Day.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Day.h; sourceTree = "<group>"; };
-		7C65364E183D2AB20009953E /* Day.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Day.m; sourceTree = "<group>"; };
 		810FA62B183994180094E771 /* NSOWelcome.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = NSOWelcome.jpg; sourceTree = "<group>"; };
 		810FA632183997C00094E771 /* waveMenu.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = waveMenu.jpg; sourceTree = "<group>"; };
 		810FA6341839A1B40094E771 /* campusMap.pdf */ = {isa = PBXFileReference; lastKnownFileType = image.pdf; path = campusMap.pdf; sourceTree = "<group>"; };
@@ -123,10 +117,6 @@
 				7C653643183D29B70009953E /* MapViewController.h */,
 				7C653644183D29B70009953E /* MapViewController.m */,
 				7C62DD15182AC32A0003AD91 /* Schedule.xcdatamodeld */,
-				7C65364D183D2AB20009953E /* Day.h */,
-				7C65364E183D2AB20009953E /* Day.m */,
-				7C65364A183D2AA30009953E /* Event.h */,
-				7C65364B183D2AA30009953E /* Event.m */,
 				7C62DD0D182ABCDE0003AD91 /* CampusInfoViewController.h */,
 				7C62DD0E182ABCDE0003AD91 /* CampusInfoViewController.m */,
 				7C62DD13182ABFA00003AD91 /* README */,
@@ -242,8 +232,6 @@
 				7C62DD0F182ABCDE0003AD91 /* CampusInfoViewController.m in Sources */,
 				7C62DD17182AC32A0003AD91 /* Schedule.xcdatamodeld in Sources */,
 				7C653645183D29B70009953E /* MapViewController.m in Sources */,
-				7C65364C183D2AA30009953E /* Event.m in Sources */,
-				7C65364F183D2AB20009953E /* Day.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

@@ -13,6 +13,7 @@
 @end
 
 @implementation MapViewController
+@synthesize webView;
 
 - (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
 {
@@ -27,6 +28,11 @@
 {
     [super viewDidLoad];
 	// Do any additional setup after loading the view.
+    NSString *path = [[NSBundle mainBundle] pathForResource:@"campusMap1" ofType:@"pdf"];
+    NSURL *targetURL = [NSURL fileURLWithPath:path];
+    NSURLRequest *request = [NSURLRequest requestWithURL:targetURL];
+    [webView loadRequest:request];
+    webView.scalesPageToFit = YES;
 }
 
 - (void)didReceiveMemoryWarning

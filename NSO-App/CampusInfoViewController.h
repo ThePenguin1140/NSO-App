@@ -11,10 +11,8 @@
 @interface CampusInfoViewController : UIViewController
 - (IBAction)segmentControlAction:(id)sender;
 
-
 @property (weak, nonatomic) IBOutlet UIWebView *webViewGym;
 @property (weak, nonatomic) IBOutlet UIWebView *webViewLibrary;
 @property (weak, nonatomic) IBOutlet UIWebView *webViewWave;
-@property (weak, nonatomic) IBOutlet UIWebView *webViewMap;
 
 @end

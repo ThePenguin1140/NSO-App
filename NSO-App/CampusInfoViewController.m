@@ -13,7 +13,7 @@
 @end
 
 @implementation CampusInfoViewController
-@synthesize webViewGym, webViewLibrary, webViewMap, webViewWave;
+@synthesize webViewGym, webViewLibrary, webViewWave;
 
 - (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
 {
@@ -61,7 +61,9 @@
         case 1:
         {
             NSLog(@"2");
-            [webViewLibrary loadRequest:[NSURLRequest requestWithURL: [NSURL URLWithString:@"http://library.upei.ca/hours"]]];
+            NSURL *htmlFile = [NSURL fileURLWithPath:[[NSBundle mainBundle] pathForResource:@"library" ofType:@"html"] isDirectory:NO];
+
+            [webViewLibrary loadRequest:[NSURLRequest requestWithURL: htmlFile]];
             webViewLibrary.scalesPageToFit = YES;
 
             break;
@@ -77,16 +79,7 @@
 
             break;
         }
-        case 3:
-        {
-            NSLog(@"3");
-            NSString *path = [[NSBundle mainBundle] pathForResource:@"campusMap1" ofType:@"pdf"];
-            NSURL *targetURL = [NSURL fileURLWithPath:path];
-            NSURLRequest *request = [NSURLRequest requestWithURL:targetURL];
-            [webViewMap loadRequest:request];
-            webViewMap.scalesPageToFit = YES;
-            break;
-        }
+       
 
             
         default:

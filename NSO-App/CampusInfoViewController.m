@@ -60,12 +60,22 @@
             break;
         case 1:
         {
+           
+            NSURL *url = [[NSBundle mainBundle] URLForResource:@"webView1" withExtension:@"html"];
+            NSString *html = [NSString stringWithContentsOfURL:url encoding:NSUTF8StringEncoding error:nil];
+            
+            [webViewLibrary loadHTMLString:html baseURL:[url URLByDeletingLastPathComponent]];
+             /*
+            NSURLRequest *requestObj = [NSURLRequest requestWithURL:[[NSBundle mainBundle] URLForResource:@"library" withExtension:@"html"]];
+            [webViewLibrary loadRequest:requestObj];
+            
             NSLog(@"2");
+            
             NSURL *htmlFile = [NSURL fileURLWithPath:[[NSBundle mainBundle] pathForResource:@"library" ofType:@"html"] isDirectory:NO];
 
             [webViewLibrary loadRequest:[NSURLRequest requestWithURL: htmlFile]];
             webViewLibrary.scalesPageToFit = YES;
-
+*/
             break;
         }
         case 2:

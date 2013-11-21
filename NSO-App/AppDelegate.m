@@ -7,8 +7,8 @@
 //
 
 #import "AppDelegate.h"
-#import "Day.h"
-#import "Event.h"
+//#import "Day.h"
+//#import "Event.h"
 
 @implementation AppDelegate
 

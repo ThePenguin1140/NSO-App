@@ -61,7 +61,7 @@
         case 1:
         {
            
-            NSURL *url = [[NSBundle mainBundle] URLForResource:@"webView1" withExtension:@"html"];
+            NSURL *url = [[NSBundle mainBundle] URLForResource:@"library" withExtension:@"html"];
             NSString *html = [NSString stringWithContentsOfURL:url encoding:NSUTF8StringEncoding error:nil];
             
             [webViewLibrary loadHTMLString:html baseURL:[url URLByDeletingLastPathComponent]];
@@ -80,12 +80,9 @@
         }
         case 2:
         {
-            NSLog(@"3");
-            NSString *path = [[NSBundle mainBundle] pathForResource:@"menu" ofType:@"pdf"];
-            NSURL *targetURL = [NSURL fileURLWithPath:path];
-            NSURLRequest *request = [NSURLRequest requestWithURL:targetURL];
-            [webViewWave loadRequest:request];
-            webViewWave.scalesPageToFit = YES;
+            NSURL *url = [[NSBundle mainBundle] URLForResource:@"wave" withExtension:@"html"];
+            NSString *html = [NSString stringWithContentsOfURL:url encoding:NSUTF8StringEncoding error:nil];
+            [webViewLibrary loadHTMLString:html baseURL:[url URLByDeletingLastPathComponent]];
 
             break;
         }

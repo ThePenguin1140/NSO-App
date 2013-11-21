@@ -19,6 +19,7 @@
 
 - (void)viewWillAppear:(BOOL)animated {
     [super viewWillAppear:animated];
+    [self setTitle:@"NSO Events"];
     [self loadTableData];
 }
 
@@ -79,7 +80,7 @@
     [[cell textLabel] setText:[event eventTitle]];
     // Hopefull this will work
     // if it does the subtitle will display the time and the location
-    NSString *subtitle=[[NSString alloc]initWithStyle:@"%@\t%@\n%@",[event eventTime],[event eventLocation],[event eventDescription]];
+    NSString *subtitle=[NSString stringWithFormat:@"%@\t%@\n%@",[event eventTime],[event eventLocation],[event eventDescription]];
     [[cell detailTextLabel] setText:subtitle];
     return cell;
 }
@@ -153,12 +154,12 @@
     [fetchRequest setPredicate:predicate];
 
     //add sort desc
-    NSSortDescriptor *sortDesc = [[NSSortDescriptor alloc]initWithKey:@"date" ascending:YES];
+    NSSortDescriptor *sortDesc = [[NSSortDescriptor alloc]initWithKey:@"eventTime" ascending:YES];
     NSArray *sortList = [[NSArray alloc]initWithObjects:sortDesc,nil];
     [fetchRequest setSortDescriptors:sortList];
 
     NSError *error = nil;
-    eventArray = [context executeFetchRequest:fetchRequest erro:&error];
-    [[self tableview] reloadData];
+    eventArray = [context executeFetchRequest:fetchRequest error:&error];
+    [[self tableView] reloadData];
 }
 @end

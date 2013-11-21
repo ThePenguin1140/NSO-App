@@ -60,7 +60,7 @@
         }
     }
 }
-/*
+
 - (void)create {
     
     //Get context
@@ -105,29 +105,71 @@
         [event[i] setEventTime:@""];
         [event[i] setEventTitle:@""];
     }
+    int offset=0;
     for(int i=0;i<5;i++){
-        [event[i] setDay:sat1];
+        [event[i+offset] setDay:sat1];
+        [sat1 addEventObject:event[i+offset]];
     }
+    offset+=5;
     for(int i=0;i<7;i++){
-        [event[i+5] setDay:sun2];
+        [event[i+offset] setDay:sun2];
+        [sun2 addEventObject:event[i+offset]];
     }
+    offset+=7;
     for(int i=0;i<8;i++){
-        [event[i+5+7] setDay:mon3];
+        [event[i+offset] setDay:mon3];
+        [mon3 addEventObject:event[i+offset]];
     }
+    offset+=8;
     for(int i=0;i<5;i++){
-        [event[i+5+7+8] setDay:tue4];
+        [event[i+offset] setDay:tue4];
+        [tue4 addEventObject:event[i+offset]];
     }
+    offset+=5;
     for(int i=0;i<5;i++){
-        [event[i+5+7+8+5] setDay:wed5];
+        [event[i+offset] setDay:wed5];
+        [wed5 addEventObject:event[i+offset]];
     }
+    offset+=5;
     for(int i=0;i<1;i++){
-        [event[i+5+7+8+5+5]setDay:thu6];
+        [event[i+offset]setDay:thu6];
+        [thu6 addEventObject:event[i+offset]];
     }
+    offset+=1;
     for(int i=0;i<3;i++){
-        [event[i+5+7+8+5+5+1]setDay:sat8];
+        [event[i+offset]setDay:sat8];
+        [sat8 addEventObject:event[i+offset]];
+    }
+    //Do the relationships go bothways????
+}
+
+-(void) read {
+    MSManagedObject *context = [self managedObjectContext];
+
+    // Build a fresh request for some reason who knows
+    NSFetchRequest *fetchRequest = [[NSFetchRequest alloc]init];
+    NSEntityDescription *entity = [NSEntityDescription entityForName:@"Day" inManagedObjectContext:context];
+
+    [fetchRequest setEntity:entity];
+    NSError *error = nil;
+    NSArray *fetchedObjects = [context executeFetchRequest:fetchRequest error:&error];
+
+    NSSortDescriptor *sortDesc = [NSSortDescriptor sortDescriptorWithKey:@"date" ascending:YES];
+    NSArray *sortList = [fetchedObjects sortedArrayUsingDescriptors:[NSArray arrayWithObject:sortDesc]];
+    for(Day *day in sortList) {
+        NSLog(@"%@:%@",[day name],[day date]);
+
+        NSLog(@"\t\tEvents:");
+        NSSet *events = [day events];
+        NSSortDescriptor *sortDescDays = [NSSortDescriptor sortDescriptorWithKey:@"time" ascending:YES];
+        NSArray *sortListDays = [events sortedArrayUsingDescriptors:[NSArray arrayWithObject:sortDescDays]];
+        for(Event *event in sortListDays) {
+            //Display event info
+            NSLog(@"\t\t\t\t%@\n%@\t%@\n%@",[event title],[event time],[event location],[event description]);
+        }
     }
 }
-*/
+
 // Returns the managed object context for the application.
 // If the context doesn't already exist, it is created and bound to the persistent store coordinator for the application.
 - (NSManagedObjectContext *)managedObjectContext

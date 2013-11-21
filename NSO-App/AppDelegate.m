@@ -66,7 +66,8 @@
     //Get context
     NSManagedObjectContext *context = [self managedObjectContext];
     if(!context){
-        NSLog(@"Context error");
+        NSLog(@"Context Error: Context not loaded");
+        return 0;
     }
     //create and onvifgure the day entity and set it's attributes
     Day *sat1 = [NSEntityDescription insertNewObjectForEntityForName:@"Day" inManagedObjectContext:context];

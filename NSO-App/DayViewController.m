@@ -14,6 +14,14 @@
 
 @implementation DayViewController
 
+@synthesize dayArray;
+
+- (void)viewWillAppear:(BOOL)animated {
+    [super viewWillAppear:animated];
+    //load table data
+    [self loadTableData];
+}
+
 - (id)initWithStyle:(UITableViewStyle)style
 {
     self = [super initWithStyle:style];
@@ -44,25 +52,30 @@
 
 - (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView
 {
-#warning Potentially incomplete method implementation.
     // Return the number of sections.
-    return 0;
+    return 1;
 }
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
 {
-#warning Incomplete method implementation.
     // Return the number of rows in the section.
-    return 0;
+    return [dayArray count];
 }
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
 {
-    static NSString *CellIdentifier = @"Cell";
-    UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:CellIdentifier forIndexPath:indexPath];
+    static NSString *CellIdentifier = @"DayCell";
+    UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:CellIdentifier];
     
+    if(cell==nil){
+        cell=[[UITableViewCell alloc] initWithStyle:UITableViewCellStyleSubtitle reuseIdentifier:CellIdentifier];
+    }
+
     // Configure the cell...
-    
+    [cell setAccessoryType:UITableViewCellAccessoryDisclosureIndicator];
+
+    //Get the day
+    Day *day = [dayArray objectAtIndex:[dayArray row]];
     return cell;
 }
 
@@ -105,7 +118,6 @@
 }
 */
 
-#pragma mark - Table view delegate
 
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
 {
@@ -118,4 +130,25 @@
      */
 }
 
+- (AppDelegate *)appDelegate {
+    return (AppDelegate *)[[UIApplication sharedApplication] delegate];
+}
+
+- (void) loadTableData {
+    NSManagedObjectContext *context = [[self appDelegate] managedObjectContext];
+
+    //fetch request
+    NSFetchRequest *fetchRequest = [[NSFetchRequest alloc]init];
+    NSEntityDescription *entity = [NSEntityDescription entityForName:@"Day" inManagedObjectContext:context];
+
+    [fetchRequest setEntity:entity];
+
+    NSError *error = nil;
+
+    NSSortDescriptor *sortDesc = [NSSortDescriptor sortDescriptorWithKey:@"date" ascending:YES];
+    NSArray *sortList = [[NSArray alloc] initWithObjects:sortDesc,nil]];
+    [fetchRequest setSortDescriptor:sortList];
+    dayArray = [context executeFetchRequest:fetchRequest error:&error];
+    [[self tableView] reloadData];
+}
 @end

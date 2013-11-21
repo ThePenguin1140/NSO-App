@@ -14,6 +14,14 @@
 
 @implementation EventViewController
 
+@synthesize eventArray;
+@synthesize dayID;
+
+- (void)viewWillAppear:(BOOL)animated {
+    [super viewWillAppear:animated];
+    [self loadTableData];
+}
+
 - (id)initWithStyle:(UITableViewStyle)style
 {
     self = [super initWithStyle:style];
@@ -44,22 +52,35 @@
 - (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView
 {
     // Return the number of sections.
-    return 0;
+    return 1;
 }
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
 {
     // Return the number of rows in the section.
-    return 0;
+    return [eventArray count];
 }
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
 {
     static NSString *CellIdentifier = @"Cell";
-    UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:CellIdentifier forIndexPath:indexPath];
+    UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:CellIdentifier];
+    if(cell==nil) {
+        cell = [[UITableViewCell alloc] initWithStyle:UITableViewCellStyleSubtitle reuseIdentifier:CellIdentifier];
+    }
     
     // Configure the cell...
-    
+    [cell setAccessoryType:UITableViewCellAccessoryDisclosureIndicator];
+
+    //get the event object
+    Event *event = [eventArray objectAtIndex:[indexPath row]];
+
+    //set the cells text and subtitle
+    [[cell textLabel] setText:[event eventTitle]];
+    // Hopefull this will work
+    // if it does the subtitle will display the time and the location
+    NSString *subtitle=[[NSString alloc]initWithStyle:@"%@\t%@\n%@",[event eventTime],[event eventLocation],[event eventDescription]];
+    [[cell detailTextLabel] setText:subtitle];
     return cell;
 }
 
@@ -115,4 +136,29 @@
      */
 }
 
+- (AppDelegate *)appDelegate {
+    return (AppDelegate *)[[UIApplication sharedApplication] delegate];
+}
+
+// fetch and reload table
+- (void) loadTableData {
+    NSManagedObjectContext *context = [[self appDelegate] managedObjectContext];
+
+    //build fetch request
+    NSFetchRequest *fetchRequest = [[NSFetchRequest alloc] init];
+    NSEntityDescription *entity = [NSEntityDescription entityForName:@"Event" inManagedObjectContext:context];
+    [fetchRequest setEntity:entity];
+
+    NSPredicate *predicate = [NSPredicate predicateWithFormat:@"Day == %@",[context objectWithID:[self dayID]]];
+    [fetchRequest setPredicate:predicate];
+
+    //add sort desc
+    NSSortDescriptor *sortDesc = [[NSSortDescriptor alloc]initWithKey:@"date" ascending:YES];
+    NSArray *sortList = [[NSArray alloc]initWithObjects:sortDesc,nil];
+    [fetchRequest setSortDescriptors:sortList];
+
+    NSError *error = nil;
+    eventArray = [context executeFetchRequest:fetchRequest erro:&error];
+    [[self tableview] reloadData];
+}
 @end

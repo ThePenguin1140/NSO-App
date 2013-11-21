@@ -7,9 +7,14 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "AppDelegate.h"
+#import "Day.h"
+#import "Event.h"
 
 @interface EventViewController : UITableViewController
 
 @property (strong, nonatomic) NSArray *eventArray;
+
+@property (strong, nonatomic) NSManagedObjectID *dayID;
 
 @end

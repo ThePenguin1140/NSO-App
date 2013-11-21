@@ -76,6 +76,10 @@
 
     //Get the day
     Day *day = [dayArray objectAtIndex:[dayArray row]];
+
+    //set label and subtitle
+    [[cell textLabel] setText:[day name]];
+    [[cell detailTextLabel] setText:[day date]];
     return cell;
 }
 
@@ -121,13 +125,13 @@
 
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
 {
-    // Navigation logic may go here. Create and push another view controller.
-    /*
-     <#DetailViewController#> *detailViewController = [[<#DetailViewController#> alloc] initWithNibName:@"<#Nib name#>" bundle:nil];
-     // ...
-     // Pass the selected object to the new view controller.
-     [self.navigationController pushViewController:detailViewController animated:YES];
-     */
+    EventViewController *eventviewController = [self.storyboard instantiateViewControllerWithIdentifier"@EventViewController"];
+    //get the day
+    Day *day = [dayArray objectAtIndex:indexPath.row];
+
+    [eventviewController setDayID:[day objectID]];
+
+    [[self navigationController] pushViewController:departmentViewController animated:YES];
 }
 
 - (AppDelegate *)appDelegate {

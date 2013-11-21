@@ -7,6 +7,10 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "AppDelegate.h"
+#import "Event.h"
+#import "Day.h"
+#import "EventViewController.h"
 
 @interface DayViewController : UITableViewController
 

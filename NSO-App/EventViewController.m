@@ -16,6 +16,7 @@
 
 @synthesize eventArray;
 @synthesize dayID;
+@synthesize currentSelectedCell;
 
 - (void)viewWillAppear:(BOOL)animated {
     [super viewWillAppear:animated];
@@ -68,6 +69,7 @@
     UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:CellIdentifier];
     if(cell==nil) {
         cell = [[UITableViewCell alloc] initWithStyle:UITableViewCellStyleSubtitle reuseIdentifier:CellIdentifier];
+        //[[cell detailTextLabel] setLineBreakMode: NSLineBreakByWordWrapping];
     }
     
     // Configure the cell...
@@ -123,20 +125,22 @@
     return YES;
 }
 */
-
-#pragma mark - Table view delegate
-
+/*
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
 {
-    // Navigation logic may go here. Create and push another view controller.
-    /*
-     <#DetailViewController#> *detailViewController = [[<#DetailViewController#> alloc] initWithNibName:@"<#Nib name#>" bundle:nil];
-     // ...
-     // Pass the selected object to the new view controller.
-     [self.navigationController pushViewController:detailViewController animated:YES];
-     */
+    [self setCurrentSelectedCell:indexPath.row];
+    [tableView beginUpdates];
+    [tableView endUpdates];
 }
 
+- (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath {
+    
+    if ([indexPath row] == [self currentSelectedCell]) {
+        return  80;
+    }
+    else return 40;
+}
+*/
 - (AppDelegate *)appDelegate {
     return (AppDelegate *)[[UIApplication sharedApplication] delegate];
 }

@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="2.0" toolsVersion="2844" systemVersion="12F45" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" initialViewController="2">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="2.0" toolsVersion="2844" systemVersion="11G63" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" initialViewController="2">
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="1930"/>
     </dependencies>
@@ -51,7 +51,7 @@
         <!--Day View Controller - Root View Controller-->
         <scene sceneID="RoJ-qg-2tx">
             <objects>
-                <tableViewController id="421-yr-Noe" customClass="DayViewController" sceneMemberID="viewController">
+                <tableViewController storyboardIdentifier="DayController" useStoryboardIdentifierAsRestorationIdentifier="YES" id="421-yr-Noe" customClass="DayViewController" sceneMemberID="viewController">
                     <tableView key="view" opaque="NO" clipsSubviews="YES" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" rowHeight="44" sectionHeaderHeight="22" sectionFooterHeight="22" id="yP2-BA-wuD">
                         <rect key="frame" x="0.0" y="64" width="320" height="455"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -72,12 +72,12 @@
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="T6I-bQ-gOA" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="303" y="-1922"/>
+            <point key="canvasLocation" x="319" y="-2562"/>
         </scene>
         <!--Event View Controller-->
         <scene sceneID="KXt-IC-Ztt">
             <objects>
-                <tableViewController id="axN-Z4-b73" customClass="EventViewController" sceneMemberID="viewController">
+                <tableViewController storyboardIdentifier="EventController" useStoryboardIdentifierAsRestorationIdentifier="YES" id="axN-Z4-b73" customClass="EventViewController" sceneMemberID="viewController">
                     <tableView key="view" opaque="NO" clipsSubviews="YES" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" rowHeight="44" sectionHeaderHeight="22" sectionFooterHeight="22" id="kFC-Kz-4Lo">
                         <rect key="frame" x="0.0" y="20" width="320" height="548"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -101,7 +101,7 @@
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="jg5-3f-oWL" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="687" y="-2242"/>
+            <point key="canvasLocation" x="875" y="-2570"/>
         </scene>
         <!--Navigation Controller - Item-->
         <scene sceneID="N0k-tj-mL5">
@@ -117,7 +117,7 @@
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="9py-uf-CLL" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-231" y="-1922"/>
+            <point key="canvasLocation" x="-251" y="-2202"/>
         </scene>
         <!--Table View Controller - Item-->
         <scene sceneID="TIH-Ir-cJL">

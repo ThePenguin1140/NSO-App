@@ -18,6 +18,8 @@
 
 - (void)viewWillAppear:(BOOL)animated {
     [super viewWillAppear:animated];
+    //set title
+    [self setTitle:@"NSO Events"];
     //load table data
     [self loadTableData];
 }
@@ -75,7 +77,7 @@
     [cell setAccessoryType:UITableViewCellAccessoryDisclosureIndicator];
 
     //Get the day
-    Day *day = [dayArray objectAtIndex:[dayArray row]];
+    Day *day = [dayArray objectAtIndex:[indexPath row]];
 
     //set label and subtitle
     [[cell textLabel] setText:[day name]];
@@ -125,13 +127,18 @@
 
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
 {
-    EventViewController *eventviewController = [self.storyboard instantiateViewControllerWithIdentifier"@EventViewController"];
+    EventViewController *eventviewController = [self.storyboard instantiateViewControllerWithIdentifier:@"EventController"];
     //get the day
-    Day *day = [dayArray objectAtIndex:indexPath.row];
+    Day *day = [dayArray objectAtIndex:[indexPath row]];
 
     [eventviewController setDayID:[day objectID]];
-
-    [[self navigationController] pushViewController:departmentViewController animated:YES];
+    UIBarButtonItem *backButton = [[UIBarButtonItem alloc]
+                                   initWithTitle: @"Back"
+                                   style: UIBarButtonItemStyleBordered
+                                   target: nil action: nil];
+    
+    [self.navigationItem setBackBarButtonItem: backButton];
+    [[self navigationController] pushViewController: eventviewController animated:YES];
 }
 
 - (AppDelegate *)appDelegate {
@@ -150,8 +157,8 @@
     NSError *error = nil;
 
     NSSortDescriptor *sortDesc = [NSSortDescriptor sortDescriptorWithKey:@"date" ascending:YES];
-    NSArray *sortList = [[NSArray alloc] initWithObjects:sortDesc,nil]];
-    [fetchRequest setSortDescriptor:sortList];
+    NSArray *sortList = [[NSArray alloc] initWithObjects:sortDesc,nil];
+    [fetchRequest setSortDescriptors:sortList];
     dayArray = [context executeFetchRequest:fetchRequest error:&error];
     [[self tableView] reloadData];
 }

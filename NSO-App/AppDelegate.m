@@ -16,7 +16,8 @@
 @synthesize persistentStoreCoordinator = _persistentStoreCoordinator;- (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions
 {
     // Override point for customization after application launch.
-   // [self create];
+    [self create];
+    [self read];
     return YES;
 }
 							
@@ -67,7 +68,7 @@
     NSManagedObjectContext *context = [self managedObjectContext];
     if(!context){
         NSLog(@"Context Error: Context not loaded");
-        return 0;
+        return;
     }
     //create and onvifgure the day entity and set it's attributes
     Day *sat1 = [NSEntityDescription insertNewObjectForEntityForName:@"Day" inManagedObjectContext:context];
@@ -90,7 +91,7 @@
     [thu6 setDate:@"September 6th"];
     Day *sat8 = [NSEntityDescription insertNewObjectForEntityForName:@"Day" inManagedObjectContext:context];
     [sat8 setName:@"Saturday"];
-    [mon3 setDate:@"September 8th"];
+    [sat8 setDate:@"September 8th"];
     
     
     //create and configure the event entity and set it's attributes
@@ -144,7 +145,7 @@
 }
 
 -(void) read {
-    MSManagedObject *context = [self managedObjectContext];
+    NSManagedObjectContext *context = [self managedObjectContext];
 
     // Build a fresh request for some reason who knows
     NSFetchRequest *fetchRequest = [[NSFetchRequest alloc]init];
@@ -152,7 +153,7 @@
 
     [fetchRequest setEntity:entity];
     NSError *error = nil;
-    NSArray *fetchedObjects = [context executeFetchRequest:fetchRequest error:&error];
+    NSArray *fetchedObjects = [context executeFetchRequest: fetchRequest error:&error];
 
     NSSortDescriptor *sortDesc = [NSSortDescriptor sortDescriptorWithKey:@"date" ascending:YES];
     NSArray *sortList = [fetchedObjects sortedArrayUsingDescriptors:[NSArray arrayWithObject:sortDesc]];
@@ -160,12 +161,12 @@
         NSLog(@"%@:%@",[day name],[day date]);
 
         NSLog(@"\t\tEvents:");
-        NSSet *events = [day events];
-        NSSortDescriptor *sortDescDays = [NSSortDescriptor sortDescriptorWithKey:@"time" ascending:YES];
+        NSSet *events = [day event];
+        NSSortDescriptor *sortDescDays = [NSSortDescriptor sortDescriptorWithKey:@"eventTime" ascending:YES];
         NSArray *sortListDays = [events sortedArrayUsingDescriptors:[NSArray arrayWithObject:sortDescDays]];
         for(Event *event in sortListDays) {
             //Display event info
-            NSLog(@"\t\t\t\t%@\n%@\t%@\n%@",[event title],[event time],[event location],[event description]);
+            NSLog(@"\t\t\t\t%@\n%@\t%@\n%@",[event eventTitle],[event eventTime],[event eventLocation],[event eventDescription]);
         }
     }
 }

@@ -129,11 +129,11 @@
             </objects>
             <point key="canvasLocation" x="1011" y="-1777"/>
         </scene>
-        <!--Navigation Controller - Item-->
+        <!--Navigation Controller - Contacts-->
         <scene sceneID="dJD-Sy-qza">
             <objects>
                 <navigationController definesPresentationContext="YES" id="n5p-87-1IU" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="Item" id="Sli-NO-pU9"/>
+                    <tabBarItem key="tabBarItem" title="Contacts" image="contacts.png" id="Sli-NO-pU9"/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="phw-n2-wI9">
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
@@ -294,8 +294,41 @@
     <resources>
         <image name="NSOWelcome.jpg" width="1000" height="288"/>
         <image name="campusInfo.png" width="30" height="30"/>
+        <image name="contacts.png" width="30" height="30"/>
         <image name="mapIcon.png" width="30" height="30"/>
     </resources>
+    <classes>
+        <class className="AddressViewController" superclassName="UITableViewController">
+            <source key="sourceIdentifier" type="project" relativePath="./Classes/AddressViewController.h"/>
+        </class>
+        <class className="CampusInfoViewController" superclassName="UIViewController">
+            <source key="sourceIdentifier" type="project" relativePath="./Classes/CampusInfoViewController.h"/>
+            <relationships>
+                <relationship kind="action" name="segmentControlAction:"/>
+                <relationship kind="outlet" name="webViewGym" candidateClass="UIWebView"/>
+                <relationship kind="outlet" name="webViewLibrary" candidateClass="UIWebView"/>
+                <relationship kind="outlet" name="webViewWave" candidateClass="UIWebView"/>
+            </relationships>
+        </class>
+        <class className="DayViewController" superclassName="UITableViewController">
+            <source key="sourceIdentifier" type="project" relativePath="./Classes/DayViewController.h"/>
+        </class>
+        <class className="EventViewController" superclassName="UITableViewController">
+            <source key="sourceIdentifier" type="project" relativePath="./Classes/EventViewController.h"/>
+        </class>
+        <class className="MapViewController" superclassName="UIViewController">
+            <source key="sourceIdentifier" type="project" relativePath="./Classes/MapViewController.h"/>
+            <relationships>
+                <relationship kind="outlet" name="webView" candidateClass="UIWebView"/>
+            </relationships>
+        </class>
+        <class className="NSLayoutConstraint" superclassName="NSObject">
+            <source key="sourceIdentifier" type="project" relativePath="./Classes/NSLayoutConstraint.h"/>
+        </class>
+        <class className="ViewController" superclassName="UIViewController">
+            <source key="sourceIdentifier" type="project" relativePath="./Classes/ViewController.h"/>
+        </class>
+    </classes>
     <simulatedMetricsContainer key="defaultSimulatedMetrics">
         <simulatedStatusBarMetrics key="statusBar"/>
         <simulatedOrientationMetrics key="orientation"/>

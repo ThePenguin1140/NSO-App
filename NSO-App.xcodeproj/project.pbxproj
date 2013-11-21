@@ -39,6 +39,8 @@
 		81D69FC5183E559A00A4B8EE /* AddressViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 81D69FC4183E559A00A4B8EE /* AddressViewController.m */; };
 		81D69FC9183E560100A4B8EE /* AddressBook.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 81D69FC7183E560000A4B8EE /* AddressBook.framework */; };
 		81D69FCA183E560100A4B8EE /* AddressBookUI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 81D69FC8183E560000A4B8EE /* AddressBookUI.framework */; };
+		81D69FCC183E56E000A4B8EE /* contacts.png in Resources */ = {isa = PBXBuildFile; fileRef = 81D69FCB183E56E000A4B8EE /* contacts.png */; };
+		81D69FCE183E58D600A4B8EE /* Menu.plist in Resources */ = {isa = PBXBuildFile; fileRef = 81D69FCD183E58D600A4B8EE /* Menu.plist */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -86,6 +88,8 @@
 		81D69FC4183E559A00A4B8EE /* AddressViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AddressViewController.m; sourceTree = "<group>"; };
 		81D69FC7183E560000A4B8EE /* AddressBook.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AddressBook.framework; path = System/Library/Frameworks/AddressBook.framework; sourceTree = SDKROOT; };
 		81D69FC8183E560000A4B8EE /* AddressBookUI.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AddressBookUI.framework; path = System/Library/Frameworks/AddressBookUI.framework; sourceTree = SDKROOT; };
+		81D69FCB183E56E000A4B8EE /* contacts.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = contacts.png; sourceTree = "<group>"; };
+		81D69FCD183E58D600A4B8EE /* Menu.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Menu.plist; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -168,6 +172,7 @@
 			isa = PBXGroup;
 			children = (
 				7C62DCE2182AB09B0003AD91 /* NSO-App-Info.plist */,
+				81D69FCD183E58D600A4B8EE /* Menu.plist */,
 				7C62DCE3182AB09B0003AD91 /* InfoPlist.strings */,
 				7C62DCE6182AB09B0003AD91 /* main.m */,
 				7C62DCE8182AB09B0003AD91 /* NSO-App-Prefix.pch */,
@@ -177,6 +182,7 @@
 				810FA6361839A60F0094E771 /* menu.pdf */,
 				810FA6381839AF140094E771 /* campusInfo.png */,
 				810FA6341839A1B40094E771 /* campusMap.pdf */,
+				81D69FCB183E56E000A4B8EE /* contacts.png */,
 				81A67893183D320C0019160F /* mapIcon.png */,
 				810FA63A1839B0640094E771 /* campusMap1.pdf */,
 				810FA62B183994180094E771 /* NSOWelcome.jpg */,
@@ -253,6 +259,8 @@
 				81A67894183D320C0019160F /* mapIcon.png in Resources */,
 				816E7D3C183DB18700266F64 /* wave.html in Resources */,
 				816E7D3F183DB19600266F64 /* library.html in Resources */,
+				81D69FCC183E56E000A4B8EE /* contacts.png in Resources */,
+				81D69FCE183E58D600A4B8EE /* Menu.plist in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

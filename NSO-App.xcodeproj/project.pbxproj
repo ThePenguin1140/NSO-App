@@ -36,6 +36,9 @@
 		816E7D3C183DB18700266F64 /* wave.html in Resources */ = {isa = PBXBuildFile; fileRef = 816E7D3B183DB18700266F64 /* wave.html */; };
 		816E7D3F183DB19600266F64 /* library.html in Resources */ = {isa = PBXBuildFile; fileRef = 816E7D3E183DB19600266F64 /* library.html */; };
 		81A67894183D320C0019160F /* mapIcon.png in Resources */ = {isa = PBXBuildFile; fileRef = 81A67893183D320C0019160F /* mapIcon.png */; };
+		81D69FC5183E559A00A4B8EE /* AddressViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 81D69FC4183E559A00A4B8EE /* AddressViewController.m */; };
+		81D69FC9183E560100A4B8EE /* AddressBook.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 81D69FC7183E560000A4B8EE /* AddressBook.framework */; };
+		81D69FCA183E560100A4B8EE /* AddressBookUI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 81D69FC8183E560000A4B8EE /* AddressBookUI.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -79,6 +82,10 @@
 		816E7D3B183DB18700266F64 /* wave.html */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.html; path = wave.html; sourceTree = "<group>"; };
 		816E7D3E183DB19600266F64 /* library.html */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.html; path = library.html; sourceTree = "<group>"; };
 		81A67893183D320C0019160F /* mapIcon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = mapIcon.png; sourceTree = "<group>"; };
+		81D69FC3183E559A00A4B8EE /* AddressViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AddressViewController.h; sourceTree = "<group>"; };
+		81D69FC4183E559A00A4B8EE /* AddressViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AddressViewController.m; sourceTree = "<group>"; };
+		81D69FC7183E560000A4B8EE /* AddressBook.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AddressBook.framework; path = System/Library/Frameworks/AddressBook.framework; sourceTree = SDKROOT; };
+		81D69FC8183E560000A4B8EE /* AddressBookUI.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AddressBookUI.framework; path = System/Library/Frameworks/AddressBookUI.framework; sourceTree = SDKROOT; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -86,6 +93,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				81D69FC9183E560100A4B8EE /* AddressBook.framework in Frameworks */,
+				81D69FCA183E560100A4B8EE /* AddressBookUI.framework in Frameworks */,
 				7C653666183D3A0F0009953E /* CoreData.framework in Frameworks */,
 				7C62DCDB182AB09B0003AD91 /* UIKit.framework in Frameworks */,
 				7C62DCDD182AB09B0003AD91 /* Foundation.framework in Frameworks */,
@@ -99,6 +108,8 @@
 		7C62DCCB182AB09B0003AD91 = {
 			isa = PBXGroup;
 			children = (
+				81D69FC7183E560000A4B8EE /* AddressBook.framework */,
+				81D69FC8183E560000A4B8EE /* AddressBookUI.framework */,
 				7C62DCE0182AB09B0003AD91 /* NSO-App */,
 				7C62DCD9182AB09B0003AD91 /* Frameworks */,
 				7C62DCD7182AB09B0003AD91 /* Products */,
@@ -135,6 +146,8 @@
 				7C62DCEA182AB09B0003AD91 /* AppDelegate.m */,
 				7C62DD15182AC32A0003AD91 /* Schedule.xcdatamodeld */,
 				7C62DCF2182AB09B0003AD91 /* MainStoryboard.storyboard */,
+				81D69FC3183E559A00A4B8EE /* AddressViewController.h */,
+				81D69FC4183E559A00A4B8EE /* AddressViewController.m */,
 				7CC71906183D6410007F7E52 /* EventViewController.h */,
 				7CC71907183D6410007F7E52 /* EventViewController.m */,
 				7CC71902183D63EB007F7E52 /* DayViewController.h */,
@@ -260,6 +273,7 @@
 				7C653664183D38530009953E /* Day.m in Sources */,
 				7CC71904183D63EB007F7E52 /* DayViewController.m in Sources */,
 				7CC71908183D6410007F7E52 /* EventViewController.m in Sources */,
+				81D69FC5183E559A00A4B8EE /* AddressViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

@@ -25,6 +25,8 @@
 		7C653661183D38520009953E /* Event.m in Sources */ = {isa = PBXBuildFile; fileRef = 7C653660183D38520009953E /* Event.m */; };
 		7C653664183D38530009953E /* Day.m in Sources */ = {isa = PBXBuildFile; fileRef = 7C653663183D38530009953E /* Day.m */; };
 		7C653666183D3A0F0009953E /* CoreData.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7C653665183D3A0F0009953E /* CoreData.framework */; };
+		7C7B9246183FE26400935A9F /* EventCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 7C7B9245183FE26400935A9F /* EventCell.xib */; };
+		7C7B924A183FE44900935A9F /* EventCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 7C7B9249183FE44900935A9F /* EventCell.m */; };
 		7C7C27CF183FD716007DCA52 /* eventsIcon.png in Resources */ = {isa = PBXBuildFile; fileRef = 7C7C27CE183FD716007DCA52 /* eventsIcon.png */; };
 		7CC71904183D63EB007F7E52 /* DayViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 7CC71903183D63EB007F7E52 /* DayViewController.m */; };
 		7CC71908183D6410007F7E52 /* EventViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 7CC71907183D6410007F7E52 /* EventViewController.m */; };
@@ -72,6 +74,9 @@
 		7C653662183D38530009953E /* Day.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = Day.h; path = ../Day.h; sourceTree = "<group>"; };
 		7C653663183D38530009953E /* Day.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = Day.m; path = ../Day.m; sourceTree = "<group>"; };
 		7C653665183D3A0F0009953E /* CoreData.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreData.framework; path = System/Library/Frameworks/CoreData.framework; sourceTree = SDKROOT; };
+		7C7B9245183FE26400935A9F /* EventCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = EventCell.xib; sourceTree = "<group>"; };
+		7C7B9248183FE44900935A9F /* EventCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EventCell.h; sourceTree = "<group>"; };
+		7C7B9249183FE44900935A9F /* EventCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EventCell.m; sourceTree = "<group>"; };
 		7C7C27CE183FD716007DCA52 /* eventsIcon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = eventsIcon.png; sourceTree = "<group>"; };
 		7CC71902183D63EB007F7E52 /* DayViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DayViewController.h; sourceTree = "<group>"; };
 		7CC71903183D63EB007F7E52 /* DayViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DayViewController.m; sourceTree = "<group>"; };
@@ -156,6 +161,9 @@
 				81D69FC4183E559A00A4B8EE /* AddressViewController.m */,
 				7CC71906183D6410007F7E52 /* EventViewController.h */,
 				7CC71907183D6410007F7E52 /* EventViewController.m */,
+				7C7B9248183FE44900935A9F /* EventCell.h */,
+				7C7B9249183FE44900935A9F /* EventCell.m */,
+				7C7B9245183FE26400935A9F /* EventCell.xib */,
 				7CC71902183D63EB007F7E52 /* DayViewController.h */,
 				7CC71903183D63EB007F7E52 /* DayViewController.m */,
 				7C653643183D29B70009953E /* MapViewController.h */,
@@ -265,6 +273,7 @@
 				81D69FCC183E56E000A4B8EE /* contacts.png in Resources */,
 				81D69FCE183E58D600A4B8EE /* Menu.plist in Resources */,
 				7C7C27CF183FD716007DCA52 /* eventsIcon.png in Resources */,
+				7C7B9246183FE26400935A9F /* EventCell.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -286,6 +295,7 @@
 				7CC71904183D63EB007F7E52 /* DayViewController.m in Sources */,
 				7CC71908183D6410007F7E52 /* EventViewController.m in Sources */,
 				81D69FC5183E559A00A4B8EE /* AddressViewController.m in Sources */,
+				7C7B924A183FE44900935A9F /* EventCell.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

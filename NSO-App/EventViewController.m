@@ -70,6 +70,7 @@
     if(cell==nil) {
         cell = [[UITableViewCell alloc] initWithStyle:UITableViewCellStyleSubtitle reuseIdentifier:CellIdentifier];
         //[[cell detailTextLabel] setLineBreakMode: NSLineBreakByWordWrapping];
+        //[[cell detailTextLabel] setNumberOfLines:3];
     }
     
     // Configure the cell...
@@ -125,22 +126,28 @@
     return YES;
 }
 */
-/*
+
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
 {
-    [self setCurrentSelectedCell:indexPath.row];
-    [tableView beginUpdates];
-    [tableView endUpdates];
+    /*
+    UITextView *desField = [[UITextView alloc] initWithFrame:CGRectMake(110, 10, 185, 30)];
+    [desField setTextColor:[UIColor blackColor]];
+    [desField setBackgroundColor:[UIColor whiteColor]];
+    [desField setTextAlignment:NSTextAlignmentLeft];
+    [desField setText:@"This is a test string"];
+    UITableViewCell *cell = [[self tableView]cellForRowAtIndexPath:indexPath];
+    [[cell contentView] addSubview:desField];
+    */
 }
 
 - (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath {
     
-    if ([indexPath row] == [self currentSelectedCell]) {
+    if ([indexPath row] == currentSelectedCell) {
         return  80;
     }
     else return 40;
 }
-*/
+
 - (AppDelegate *)appDelegate {
     return (AppDelegate *)[[UIApplication sharedApplication] delegate];
 }

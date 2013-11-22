@@ -72,13 +72,11 @@
     }
     
     // Configure the cell...
-    [cell setAccessoryType:UITableViewCellAccessoryDisclosureIndicator];
-
     //get the event object
-    Event *event = [eventArray objectAtIndex:[indexPath row]];
+    //Event *event = [eventArray objectAtIndex:[indexPath row]];
 
     //set the cells text and subtitle
-    [[cell textLabel] setText:[event eventTitle]];
+    //[[cell textLabel] setText:[event eventTitle]];
     // Hopefull this will work
     return cell;
 }

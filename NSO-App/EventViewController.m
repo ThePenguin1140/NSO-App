@@ -7,7 +7,9 @@
 //
 
 #import "EventViewController.h"
-
+#define COMMENT_LABEL_WIDTH 230
+#define COMMENT_LABEL_MIN_HEIGHT 65
+#define COMMENT_LABEL_PADDING 10
 @interface EventViewController ()
 
 @end
@@ -63,12 +65,78 @@
     return [eventArray count];
 }
 
+
+-(CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath
+{
+    //If this is the selected index we need to return the height of the cell
+    //in relation to the label height otherwise we just return the minimum label height with padding
+    if(currentSelectedCell == indexPath.row)
+    {
+        return [self getLabelHeightForIndex:indexPath.row] + COMMENT_LABEL_PADDING * 2;
+    }
+    else {
+        return COMMENT_LABEL_MIN_HEIGHT + COMMENT_LABEL_PADDING * 2;
+    }
+}
+
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
 {
+    /*
+    static NSString *CellIdentifier = @"EventCell";
+    EventCell *cell = (EventCell *)[tableView dequeueReusableCellWithIdentifier:CellIdentifier];
+    if (cell == nil) {
+        NSArray *topLevelObject = [[NSBundle mainBundle] loadNibNamed:@"EventCell" owner:self options:nil];
+        for(id currentObject in topLevelObject)
+        {
+            if([currentObject isKindOfClass:[UITableViewCell class]])
+            {
+                cell = (EventCell *)currentObject;
+                break;
+            }
+        }
+    }
+    if([cell isKindOfClass:[UITableViewCell class]]){
+        cell = (EventCell *)cell;
+    }
+    [cell setAccessoryType:UITableViewCellAccessoryDetailDisclosureButton];
+    
+    Event *event = [eventArray objectAtIndex:indexPath.row];
+    UILabel *timeAndLocationL = [[UILabel alloc]init];
+    timeAndLocationL.text = [NSString stringWithFormat:@"%@ | %@",event.eventTime,event.eventLocation];
+    //cell.titleLabel.text = event.eventTitle;
+    //cell.subtitleLabel = timeAndLocationL;
+    NSLog(@"%@",timeAndLocationL);
+   // cell.descriptionLabel.text = event.eventDescription;
+    
+    //If this is the selected index then calculate the height of the cell based on the amount of text we have
+    if(currentSelectedCell == indexPath.row)
+    {
+        CGFloat labelHeight = [self getLabelHeightForIndex:indexPath.row];
+        
+        cell.descriptionLabel.frame = CGRectMake(cell.descriptionLabel.frame.origin.x,
+                                                 cell.descriptionLabel.frame.origin.y,
+                                                 cell.descriptionLabel.frame.size.width,
+                                                 labelHeight);
+    }
+    else {
+        
+        //Otherwise just return the minimum height for the label.
+        cell.descriptionLabel.frame = CGRectMake(cell.descriptionLabel.frame.origin.x,
+                                                 cell.descriptionLabel.frame.origin.y,
+                                                 cell.descriptionLabel.frame.size.width,
+                                                 COMMENT_LABEL_MIN_HEIGHT);
+    }
+    
+    //cell.descriptionLabel.font = [UIFont fontWithName:@"Helvetica" size:14.0f];
+    //cell.descriptionLabel.text = [[eventArray objectAtIndex:indexPath.row] eventDescription];
+    
+    return cell;
+
+    */
     static NSString *CellIdentifier = @"Cell";
     UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:CellIdentifier];
     if(cell==nil) {
-        cell = [[UITableViewCell alloc] initWithStyle:UITableViewCellStyleSubtitle reuseIdentifier:CellIdentifier];
+        cell = [[UITableViewCell alloc] init];
         //[[cell detailTextLabel] setLineBreakMode: NSLineBreakByWordWrapping];
         //[[cell detailTextLabel] setNumberOfLines:3];
     }
@@ -83,7 +151,7 @@
     [[cell textLabel] setText:[event eventTitle]];
     // Hopefull this will work
     // if it does the subtitle will display the time and the location
-    NSString *subtitle=[NSString stringWithFormat:@"%@\t%@\n%@",[event eventTime],[event eventLocation],[event eventDescription]];
+    NSString *subtitle=[NSString stringWithFormat:@"%@\n%@\n%@",[event eventTime],[event eventLocation],[event eventDescription]];
     [[cell detailTextLabel] setText:subtitle];
     return cell;
 }
@@ -140,12 +208,13 @@
     */
 }
 
-- (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath {
-    
-    if ([indexPath row] == currentSelectedCell) {
-        return  80;
-    }
-    else return 40;
+//This just a convenience function to get the height of the label based on the comment text
+-(CGFloat)getLabelHeightForIndex:(NSInteger)index
+{
+    CGSize maximumSize = CGSizeMake(COMMENT_LABEL_WIDTH, 10000);
+    NSString *textBlock = [NSString stringWithFormat:@"%@\n%@\n%@\n%@",[[eventArray objectAtIndex:index]eventTitle],[[eventArray objectAtIndex:index]eventTime],[[eventArray objectAtIndex:index]eventLocation],[[eventArray objectAtIndex:index]eventDescription]];
+    CGSize labelHeighSize = [textBlock sizeWithFont:[UIFont fontWithName:@"Helvetica" size:14.0f] constrainedToSize:maximumSize lineBreakMode:NSLineBreakByWordWrapping];
+    return labelHeighSize.height;
 }
 
 - (AppDelegate *)appDelegate {

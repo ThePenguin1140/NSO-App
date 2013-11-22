@@ -68,7 +68,7 @@
     static NSString *CellIdentifier = @"Cell";
     UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:CellIdentifier];
     if(cell==nil) {
-        cell = [[UITableViewCell alloc] init];
+        cell = [[UITableViewCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:@"Cell"];
     }
     
     // Configure the cell...
@@ -80,9 +80,6 @@
     //set the cells text and subtitle
     [[cell textLabel] setText:[event eventTitle]];
     // Hopefull this will work
-    // if it does the subtitle will display the time and the location
-    NSString *subtitle=[NSString stringWithFormat:@"%@\n%@\n%@",[event eventTime],[event eventLocation],[event eventDescription]];
-    [[cell detailTextLabel] setText:subtitle];
     return cell;
 }
 

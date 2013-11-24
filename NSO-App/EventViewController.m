@@ -65,18 +65,23 @@
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
 {
-    static NSString *CellIdentifier = @"Cell";
-    UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:CellIdentifier];
+    static NSString *CellIdentifier = @"myEventCell";
+    EventCell *cell = [tableView dequeueReusableCellWithIdentifier:CellIdentifier];
     if(cell==nil) {
-        cell = [[UITableViewCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:@"Cell"];
+        cell = [[EventCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:CellIdentifier];
     }
     
     // Configure the cell...
     //get the event object
-    //Event *event = [eventArray objectAtIndex:[indexPath row]];
+    Event *event = [eventArray objectAtIndex:[indexPath row]];
 
     //set the cells text and subtitle
-    //[[cell textLabel] setText:[event eventTitle]];
+    NSLog(@"Event title %@",event.eventTitle);
+    cell.title.text = event.eventTitle;
+    NSLog(@"Cell title %@",cell.title.text);
+    cell.time.text = event.eventTime;
+    cell.location.text = event.eventLocation;
+    cell.description.text = event.eventDescription;
     // Hopefull this will work
     return cell;
 }

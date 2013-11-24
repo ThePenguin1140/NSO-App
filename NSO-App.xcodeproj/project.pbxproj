@@ -42,6 +42,7 @@
 		81D69FCA183E560100A4B8EE /* AddressBookUI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 81D69FC8183E560000A4B8EE /* AddressBookUI.framework */; };
 		81D69FCC183E56E000A4B8EE /* contacts.png in Resources */ = {isa = PBXBuildFile; fileRef = 81D69FCB183E56E000A4B8EE /* contacts.png */; };
 		81D69FCE183E58D600A4B8EE /* Menu.plist in Resources */ = {isa = PBXBuildFile; fileRef = 81D69FCD183E58D600A4B8EE /* Menu.plist */; };
+		968C7E20184288540040DDE9 /* EventCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 968C7E1F184288540040DDE9 /* EventCell.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -92,6 +93,8 @@
 		81D69FC8183E560000A4B8EE /* AddressBookUI.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AddressBookUI.framework; path = System/Library/Frameworks/AddressBookUI.framework; sourceTree = SDKROOT; };
 		81D69FCB183E56E000A4B8EE /* contacts.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = contacts.png; sourceTree = "<group>"; };
 		81D69FCD183E58D600A4B8EE /* Menu.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Menu.plist; sourceTree = "<group>"; };
+		968C7E1E184288540040DDE9 /* EventCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EventCell.h; sourceTree = "<group>"; };
+		968C7E1F184288540040DDE9 /* EventCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EventCell.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -156,6 +159,8 @@
 				81D69FC4183E559A00A4B8EE /* AddressViewController.m */,
 				7CC71906183D6410007F7E52 /* EventViewController.h */,
 				7CC71907183D6410007F7E52 /* EventViewController.m */,
+				968C7E1E184288540040DDE9 /* EventCell.h */,
+				968C7E1F184288540040DDE9 /* EventCell.m */,
 				7CC71902183D63EB007F7E52 /* DayViewController.h */,
 				7CC71903183D63EB007F7E52 /* DayViewController.m */,
 				7C653643183D29B70009953E /* MapViewController.h */,
@@ -286,6 +291,7 @@
 				7CC71904183D63EB007F7E52 /* DayViewController.m in Sources */,
 				7CC71908183D6410007F7E52 /* EventViewController.m in Sources */,
 				81D69FC5183E559A00A4B8EE /* AddressViewController.m in Sources */,
+				968C7E20184288540040DDE9 /* EventCell.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

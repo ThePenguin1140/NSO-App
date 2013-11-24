@@ -10,6 +10,7 @@
 #import "AppDelegate.h"
 #import "Day.h"
 #import "Event.h"
+#import "EventCell.h"
 
 @interface EventViewController : UITableViewController
 

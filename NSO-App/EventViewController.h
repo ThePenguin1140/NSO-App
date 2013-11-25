@@ -10,10 +10,12 @@
 #import "AppDelegate.h"
 #import "Day.h"
 #import "Event.h"
+#import "EventCell.h"
 
 @interface EventViewController : UITableViewController
 
 @property (strong, nonatomic) NSArray *eventArray;
+@property (nonatomic) int currentSelectedCell;
 
 @property (strong, nonatomic) NSManagedObjectID *dayID;
 

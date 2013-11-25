@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="2.0" toolsVersion="2844" systemVersion="12C54" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" initialViewController="2">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="2.0" toolsVersion="2844" systemVersion="11G63" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" initialViewController="2">
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="1930"/>
     </dependencies>
@@ -83,11 +83,11 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" cocoaTouchSystemColor="tableCellGroupedBackgroundColor"/>
                         <prototypes>
-                            <tableViewCell contentMode="scaleToFill" restorationIdentifier="myEventCell" selectionStyle="none" indentationWidth="10" reuseIdentifier="myEventCell" rowHeight="181" id="JcB-zr-Gpz" customClass="EventCell">
-                                <rect key="frame" x="0.0" y="22" width="320" height="181"/>
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" horizontalHuggingPriority="1000" verticalHuggingPriority="1000" restorationIdentifier="myEventCell" selectionStyle="none" indentationWidth="10" reuseIdentifier="myEventCell" rowHeight="165" id="JcB-zr-Gpz" customClass="EventCell">
+                                <rect key="frame" x="0.0" y="22" width="320" height="165"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
-                                    <rect key="frame" x="0.0" y="0.0" width="320" height="180"/>
+                                    <rect key="frame" x="0.0" y="0.0" width="320" height="164"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                     <subviews>
                                         <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="Title" lineBreakMode="wordWrap" numberOfLines="2" baselineAdjustment="alignBaselines" minimumFontSize="12" preferredMaxLayoutWidth="290" translatesAutoresizingMaskIntoConstraints="NO" id="a4O-Bd-HYn">
@@ -95,7 +95,7 @@
                                                 <constraint firstAttribute="height" constant="35" id="6hj-lN-Q29"/>
                                                 <constraint firstAttribute="width" constant="290" id="K6z-eG-Qan"/>
                                             </constraints>
-                                            <fontDescription key="fontDescription" type="boldSystem" pointSize="20"/>
+                                            <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
                                             <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                             <color key="highlightedColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                         </label>
@@ -118,7 +118,7 @@
                                         </label>
                                         <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="Description" lineBreakMode="wordWrap" numberOfLines="10" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" preferredMaxLayoutWidth="280" translatesAutoresizingMaskIntoConstraints="NO" id="6JJ-Pg-L12">
                                             <constraints>
-                                                <constraint firstAttribute="height" constant="97" id="vl3-k6-sb1"/>
+                                                <constraint firstAttribute="height" constant="54" id="EmM-Ds-6gN"/>
                                             </constraints>
                                             <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                             <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
@@ -131,13 +131,13 @@
                                     <constraint firstItem="a4O-Bd-HYn" firstAttribute="leading" secondItem="JcB-zr-Gpz" secondAttribute="leading" constant="20" type="default" id="4s7-5v-U1d"/>
                                     <constraint firstItem="6JJ-Pg-L12" firstAttribute="leading" secondItem="JcB-zr-Gpz" secondAttribute="leading" constant="20" type="default" id="5Zp-ZB-bvS"/>
                                     <constraint firstItem="c5G-IU-csA" firstAttribute="leading" secondItem="JcB-zr-Gpz" secondAttribute="leading" constant="20" type="default" id="5wZ-Ri-jum"/>
-                                    <constraint firstItem="6JJ-Pg-L12" firstAttribute="top" secondItem="JcB-zr-Gpz" secondAttribute="top" constant="69" id="Egt-IP-nce"/>
-                                    <constraint firstItem="c5G-IU-csA" firstAttribute="top" secondItem="a4O-Bd-HYn" secondAttribute="bottom" constant="8" symbolic="YES" type="default" id="FuA-FB-iq6"/>
-                                    <constraint firstItem="a4O-Bd-HYn" firstAttribute="top" secondItem="JcB-zr-Gpz" secondAttribute="top" constant="6" id="VhS-Z4-T9g"/>
+                                    <constraint firstItem="a4O-Bd-HYn" firstAttribute="top" secondItem="JcB-zr-Gpz" secondAttribute="top" constant="5" id="CeN-RA-xRv"/>
+                                    <constraint firstItem="c5G-IU-csA" firstAttribute="top" secondItem="JcB-zr-Gpz" secondAttribute="top" constant="44" id="DjS-oi-2Pj"/>
+                                    <constraint firstItem="V7P-0F-dDd" firstAttribute="top" secondItem="JcB-zr-Gpz" secondAttribute="top" constant="28" id="WHc-S7-fh5"/>
                                     <constraint firstItem="V7P-0F-dDd" firstAttribute="leading" secondItem="JcB-zr-Gpz" secondAttribute="leading" constant="20" type="default" id="XEH-en-tLS"/>
                                     <constraint firstAttribute="trailing" secondItem="6JJ-Pg-L12" secondAttribute="trailing" constant="20" type="default" id="YtY-1O-ZC3"/>
-                                    <constraint firstItem="V7P-0F-dDd" firstAttribute="top" secondItem="JcB-zr-Gpz" secondAttribute="top" constant="31" id="Zr6-5x-S7f"/>
                                     <constraint firstItem="c5G-IU-csA" firstAttribute="trailing" secondItem="a4O-Bd-HYn" secondAttribute="trailing" type="default" id="idD-I5-gKN"/>
+                                    <constraint firstItem="6JJ-Pg-L12" firstAttribute="top" secondItem="JcB-zr-Gpz" secondAttribute="top" constant="60" id="xKg-TT-Km3"/>
                                 </constraints>
                                 <connections>
                                     <outlet property="description" destination="6JJ-Pg-L12" id="bXt-h8-1Jx"/>

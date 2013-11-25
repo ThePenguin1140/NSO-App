@@ -70,7 +70,16 @@
     if(cell==nil) {
         cell = [[EventCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:CellIdentifier];
     }
+    CGSize maximumSize = CGSizeMake(280, 10000);
     
+    CGSize labelHeightSize = [[[eventArray objectAtIndex:indexPath.row] eventDescription] sizeWithFont:[UIFont fontWithName:@"Helvetica" size:14.0f] constrainedToSize:maximumSize lineBreakMode:NSLineBreakByWordWrapping];
+    CGFloat labelHeight = labelHeightSize.height;
+    
+    cell.description.frame = CGRectMake(cell.description.frame.origin.x,
+                                             cell.description.frame.origin.y,
+                                             cell.description.frame.size.width,
+                                             labelHeight);
+
     // Configure the cell...
     //get the event object
     Event *event = [eventArray objectAtIndex:[indexPath row]];

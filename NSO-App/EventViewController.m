@@ -16,6 +16,7 @@
 
 @synthesize eventArray;
 @synthesize dayID;
+@synthesize currentSelectedCell;
 
 - (void)viewWillAppear:(BOOL)animated {
     [super viewWillAppear:animated];
@@ -64,24 +65,24 @@
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
 {
-    static NSString *CellIdentifier = @"Cell";
-    UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:CellIdentifier];
+    static NSString *CellIdentifier = @"myEventCell";
+    EventCell *cell = [tableView dequeueReusableCellWithIdentifier:CellIdentifier];
     if(cell==nil) {
-        cell = [[UITableViewCell alloc] initWithStyle:UITableViewCellStyleSubtitle reuseIdentifier:CellIdentifier];
+        cell = [[EventCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:CellIdentifier];
     }
     
     // Configure the cell...
-    [cell setAccessoryType:UITableViewCellAccessoryDisclosureIndicator];
-
     //get the event object
     Event *event = [eventArray objectAtIndex:[indexPath row]];
 
     //set the cells text and subtitle
-    [[cell textLabel] setText:[event eventTitle]];
+    NSLog(@"Event title %@",event.eventTitle);
+    cell.title.text = event.eventTitle;
+    NSLog(@"Cell title %@",cell.title.text);
+    cell.time.text = event.eventTime;
+    cell.location.text = event.eventLocation;
+    cell.description.text = event.eventDescription;
     // Hopefull this will work
-    // if it does the subtitle will display the time and the location
-    NSString *subtitle=[NSString stringWithFormat:@"%@\t%@\n%@",[event eventTime],[event eventLocation],[event eventDescription]];
-    [[cell detailTextLabel] setText:subtitle];
     return cell;
 }
 
@@ -124,17 +125,17 @@
 }
 */
 
-#pragma mark - Table view delegate
-
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
 {
-    // Navigation logic may go here. Create and push another view controller.
     /*
-     <#DetailViewController#> *detailViewController = [[<#DetailViewController#> alloc] initWithNibName:@"<#Nib name#>" bundle:nil];
-     // ...
-     // Pass the selected object to the new view controller.
-     [self.navigationController pushViewController:detailViewController animated:YES];
-     */
+    UITextView *desField = [[UITextView alloc] initWithFrame:CGRectMake(110, 10, 185, 30)];
+    [desField setTextColor:[UIColor blackColor]];
+    [desField setBackgroundColor:[UIColor whiteColor]];
+    [desField setTextAlignment:NSTextAlignmentLeft];
+    [desField setText:@"This is a test string"];
+    UITableViewCell *cell = [[self tableView]cellForRowAtIndexPath:indexPath];
+    [[cell contentView] addSubview:desField];
+    */
 }
 
 - (AppDelegate *)appDelegate {

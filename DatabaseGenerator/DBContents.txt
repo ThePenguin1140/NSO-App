@@ -1,31 +1,33 @@
-﻿dayStart
+dayStart
 Saturday
 September 1
 9 am–4 pm
 McDougall Hall 246
 NSO Pack Pick-Up/Registration
 Come and pick up your NSO pack. It has lots 
-of goodies and information inside. Meet the
-leaders and get your schedule for the week!
+of goodies and information inside. Meet the 
+leaders and get your schedule for the week! 
 eventEnd
 4–6 pm 
 Residence Floors & McDougall Hall 242
 Residence & non-Residence
 information meetings
 eventEnd
-6–8 pm
-Meet in the Quadrangle
-Team Meetings & Flag Making
-Meet your teammates and plan how you will
-win the Game of NSO 2012!
-eventEnd
-8–10:30 pm
+6–8 pm 
+Meet in the Quadrangle 
+Team Meetings & Flag Making 
+Meet your teammates and plan how you will 
+win the Game of NSO 2012! 
+eventEnd 
+8-10:30pm
 UPEI Turf Field
 NSO 2012 Kick-Off and PlayFair
+ 
 eventEnd
-10:30 pm–12:30 am
+10:30 pm - 12:30 am
 CARI Pool
-POOL Party with DJ Alex
+POOL Part with DJ Alex
+  
 eventEnd
 dayEnd
 dayStart
@@ -73,26 +75,71 @@ DJ Ray Ray and DJ Bagera.
 eventEnd
 dayEnd
 dayStart
+Monday
+September 3
+9–9:30 am
+Meet in the Quadrangle 
+Team Meetings
+Meet with your team to discuss the events for the day and any questions you may have.
+eventEnd
+9:30 am–12 pm
+W.A. Murphy Student Centre
+NSO Scavenger hunt
+Not just a campus tour but a lot of fun as well. 
+eventEnd
+12–1:30 pm  
+W.A. Murphy Student Centre 
+BBQ Sponsored By UPEISU
+Meet the UPEISU executive and councillors and have some yummy treats as well. 
+eventEnd
+1:30–3 pm  
+W.A. Murphy Student Centre 
+Drew Dudley
+Funny, inspiring, and loves penguins—come listen to the wonderful words of Drew Dudley! 
+eventEnd
+3–3:30 pm  
+W.A. Murphy Student Centre
+Bling Bling! 
+How much $$ can your team raise for Shinerama in 30 minutes? You’re about to find out! 
+eventEnd
+3:30–4:30 pm
+McDougall Hall 242 
+UPEI 101: Sessions E & F
+
+eventEnd
+4:30–5:30 pm  
+Webster Centre in the Robertson Library
+Webster Center Welcome! 
+Find out what services the Webster Centre offers—plus prizes, food, and games to play.
+eventEnd
+8–11:30 pm  
+The Wave 
+Night Of Sounds
+Karaoke and good times
+
+eventEnd
+dayEnd
+dayStart
 Tuesday
 September 4
 9–9:30 am
 W.A. Murphy Student Centre
 Team Meetings
 Find out where will you be for the day,
-what will your team be doing, and
-how will you get to your location?
+what will your team be doing, and 
+how will you get to your location? 
 eventEnd
 9:30 am–6:30 pm
 Charlottetown
 Shine Day!
-Raise ALL the money for cystic fibrosis
-research and treatment.
+Raise ALL the money for cystic fibrosis 
+research and treatment. 
 eventEnd
 9–11 pm
 W.A. Murphy Student Centre
 Damien the Hypnotist
-He will amaze you.
-Donations to Shinerama will be collected at the door
+He will amaze you. 
+Donations to Shinerama will be collected at the door 
 eventEnd
 7:30–8 am
 W.A. Murphy Student Centre

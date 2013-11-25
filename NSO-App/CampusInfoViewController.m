@@ -51,7 +51,6 @@
     switch (selectedValue) {
         case 0:
         {
-            NSLog(@"1");
             
             [webViewGym loadRequest:[NSURLRequest requestWithURL: [NSURL URLWithString:@"http://ar.upei.ca/hours-operation"]]];
             webViewGym.scalesPageToFit = YES;

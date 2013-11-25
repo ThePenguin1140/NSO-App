@@ -36,6 +36,9 @@
 		810FA63B1839B0640094E771 /* campusMap1.pdf in Resources */ = {isa = PBXBuildFile; fileRef = 810FA63A1839B0640094E771 /* campusMap1.pdf */; };
 		816E7D3C183DB18700266F64 /* wave.html in Resources */ = {isa = PBXBuildFile; fileRef = 816E7D3B183DB18700266F64 /* wave.html */; };
 		816E7D3F183DB19600266F64 /* library.html in Resources */ = {isa = PBXBuildFile; fileRef = 816E7D3E183DB19600266F64 /* library.html */; };
+		8188895C1843C794008FCD13 /* eventScheduler.png in Resources */ = {isa = PBXBuildFile; fileRef = 8188895B1843C793008FCD13 /* eventScheduler.png */; };
+		818889681843CAC6008FCD13 /* AddAlarmViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 818889671843CAC6008FCD13 /* AddAlarmViewController.m */; };
+		8188896B1843CC06008FCD13 /* AlarmTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8188896A1843CC06008FCD13 /* AlarmTableViewController.m */; };
 		81A67894183D320C0019160F /* mapIcon.png in Resources */ = {isa = PBXBuildFile; fileRef = 81A67893183D320C0019160F /* mapIcon.png */; };
 		81D69FC5183E559A00A4B8EE /* AddressViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 81D69FC4183E559A00A4B8EE /* AddressViewController.m */; };
 		81D69FC9183E560100A4B8EE /* AddressBook.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 81D69FC7183E560000A4B8EE /* AddressBook.framework */; };
@@ -86,6 +89,11 @@
 		810FA63A1839B0640094E771 /* campusMap1.pdf */ = {isa = PBXFileReference; lastKnownFileType = image.pdf; path = campusMap1.pdf; sourceTree = "<group>"; };
 		816E7D3B183DB18700266F64 /* wave.html */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.html; path = wave.html; sourceTree = "<group>"; };
 		816E7D3E183DB19600266F64 /* library.html */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.html; path = library.html; sourceTree = "<group>"; };
+		8188895B1843C793008FCD13 /* eventScheduler.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = eventScheduler.png; sourceTree = "<group>"; };
+		818889661843CAC6008FCD13 /* AddAlarmViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AddAlarmViewController.h; sourceTree = "<group>"; };
+		818889671843CAC6008FCD13 /* AddAlarmViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AddAlarmViewController.m; sourceTree = "<group>"; };
+		818889691843CC06008FCD13 /* AlarmTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AlarmTableViewController.h; sourceTree = "<group>"; };
+		8188896A1843CC06008FCD13 /* AlarmTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AlarmTableViewController.m; sourceTree = "<group>"; };
 		81A67893183D320C0019160F /* mapIcon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = mapIcon.png; sourceTree = "<group>"; };
 		81D69FC3183E559A00A4B8EE /* AddressViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AddressViewController.h; sourceTree = "<group>"; };
 		81D69FC4183E559A00A4B8EE /* AddressViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AddressViewController.m; sourceTree = "<group>"; };
@@ -153,6 +161,10 @@
 				7C653660183D38520009953E /* Event.m */,
 				7C62DCE9182AB09B0003AD91 /* AppDelegate.h */,
 				7C62DCEA182AB09B0003AD91 /* AppDelegate.m */,
+				818889661843CAC6008FCD13 /* AddAlarmViewController.h */,
+				818889671843CAC6008FCD13 /* AddAlarmViewController.m */,
+				818889691843CC06008FCD13 /* AlarmTableViewController.h */,
+				8188896A1843CC06008FCD13 /* AlarmTableViewController.m */,
 				7C62DD15182AC32A0003AD91 /* Schedule.xcdatamodeld */,
 				7C62DCF2182AB09B0003AD91 /* MainStoryboard.storyboard */,
 				81D69FC3183E559A00A4B8EE /* AddressViewController.h */,
@@ -186,6 +198,7 @@
 				7C62DCE8182AB09B0003AD91 /* NSO-App-Prefix.pch */,
 				7C62DCEC182AB09B0003AD91 /* Default.png */,
 				7C62DCEE182AB09B0003AD91 /* Default@2x.png */,
+				8188895B1843C793008FCD13 /* eventScheduler.png */,
 				810FA632183997C00094E771 /* waveMenu.jpg */,
 				810FA6361839A60F0094E771 /* menu.pdf */,
 				810FA6381839AF140094E771 /* campusInfo.png */,
@@ -270,6 +283,7 @@
 				81D69FCC183E56E000A4B8EE /* contacts.png in Resources */,
 				81D69FCE183E58D600A4B8EE /* Menu.plist in Resources */,
 				7C7C27CF183FD716007DCA52 /* eventsIcon.png in Resources */,
+				8188895C1843C794008FCD13 /* eventScheduler.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -292,6 +306,8 @@
 				7CC71908183D6410007F7E52 /* EventViewController.m in Sources */,
 				81D69FC5183E559A00A4B8EE /* AddressViewController.m in Sources */,
 				968C7E20184288540040DDE9 /* EventCell.m in Sources */,
+				818889681843CAC6008FCD13 /* AddAlarmViewController.m in Sources */,
+				8188896B1843CC06008FCD13 /* AlarmTableViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

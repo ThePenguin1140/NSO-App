@@ -43,7 +43,6 @@
 		81D69FCC183E56E000A4B8EE /* contacts.png in Resources */ = {isa = PBXBuildFile; fileRef = 81D69FCB183E56E000A4B8EE /* contacts.png */; };
 		81D69FCE183E58D600A4B8EE /* Menu.plist in Resources */ = {isa = PBXBuildFile; fileRef = 81D69FCD183E58D600A4B8EE /* Menu.plist */; };
 
-
 		81FFFF391842FFFC00A0E9AA /* eventScheduler.png in Resources */ = {isa = PBXBuildFile; fileRef = 81FFFF381842FFFC00A0E9AA /* eventScheduler.png */; };
 		81FFFF401843024D00A0E9AA /* AddEventViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 81FFFF3F1843024D00A0E9AA /* AddEventViewController.m */; };
 		81FFFF461843050F00A0E9AA /* AlarmTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 81FFFF451843050F00A0E9AA /* AlarmTableViewController.m */; };
@@ -99,8 +98,6 @@
 		81D69FC8183E560000A4B8EE /* AddressBookUI.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AddressBookUI.framework; path = System/Library/Frameworks/AddressBookUI.framework; sourceTree = SDKROOT; };
 		81D69FCB183E56E000A4B8EE /* contacts.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = contacts.png; sourceTree = "<group>"; };
 		81D69FCD183E58D600A4B8EE /* Menu.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Menu.plist; sourceTree = "<group>"; };
-
-
 		81FFFF381842FFFC00A0E9AA /* eventScheduler.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = eventScheduler.png; sourceTree = "<group>"; };
 		81FFFF3E1843024D00A0E9AA /* AddEventViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AddEventViewController.h; sourceTree = "<group>"; };
 		81FFFF3F1843024D00A0E9AA /* AddEventViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AddEventViewController.m; sourceTree = "<group>"; };
@@ -109,7 +106,6 @@
 
 		968C7E1E184288540040DDE9 /* EventCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EventCell.h; sourceTree = "<group>"; };
 		968C7E1F184288540040DDE9 /* EventCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EventCell.m; sourceTree = "<group>"; };
-
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -284,8 +280,6 @@
 				816E7D3F183DB19600266F64 /* library.html in Resources */,
 				81D69FCC183E56E000A4B8EE /* contacts.png in Resources */,
 				81D69FCE183E58D600A4B8EE /* Menu.plist in Resources */,
-
-
 				81FFFF391842FFFC00A0E9AA /* eventScheduler.png in Resources */,
 
 				7C7C27CF183FD716007DCA52 /* eventsIcon.png in Resources */,
@@ -310,7 +304,6 @@
 				7CC71904183D63EB007F7E52 /* DayViewController.m in Sources */,
 				7CC71908183D6410007F7E52 /* EventViewController.m in Sources */,
 				81D69FC5183E559A00A4B8EE /* AddressViewController.m in Sources */,
-
 
 				81FFFF401843024D00A0E9AA /* AddEventViewController.m in Sources */,
 				81FFFF461843050F00A0E9AA /* AlarmTableViewController.m in Sources */,

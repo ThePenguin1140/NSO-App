@@ -34,11 +34,11 @@
          ignoreCount = "0"
          continueAfterRunningActions = "No"
          filePath = "NSO-App/EventViewController.m"
-         timestampString = "407089410.121082"
+         timestampString = "407095992.514244"
          startingColumnNumber = "9223372036854775807"
          endingColumnNumber = "9223372036854775807"
-         startingLineNumber = "137"
-         endingLineNumber = "137"
+         startingLineNumber = "143"
+         endingLineNumber = "143"
          landmarkName = "@implementation EventViewController"
          landmarkType = "3">
       </FileBreakpoint>

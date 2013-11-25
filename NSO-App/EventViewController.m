@@ -77,10 +77,16 @@
                                              cell.description.frame.size.width,
                                              [self tableView:tableView heightForLabelAtIndexPath:indexPath]);
 
+
     // Configure the cell...
     //get the event object
     Event *event = [eventArray objectAtIndex:[indexPath row]];
 
+    cell.description.lineBreakMode = NSLineBreakByWordWrapping;
+    CGSize heightOfLine = [[event eventDescription]sizeWithFont:[UIFont fontWithName:@"Helvetica" size:14.0f]];
+    cell.description.numberOfLines = ([self tableView:tableView heightForLabelAtIndexPath:indexPath]/heightOfLine.height)+1;
+    NSLog(@"Number of lines for description %i",cell.description.numberOfLines);
+    
     //set the cells text and subtitle
     NSLog(@"Event title %@",event.eventTitle);
     cell.title.text = event.eventTitle;
@@ -88,6 +94,9 @@
     cell.time.text = event.eventTime;
     cell.location.text = event.eventLocation;
     cell.description.text = event.eventDescription;
+    NSLog(@"Cell desciption height: %f",[self tableView:tableView heightForLabelAtIndexPath:indexPath]);
+    NSLog(@"Description label height: %f", cell.description.frame.size.height);
+    NSLog(@"Cell description %@", cell.description.text);
     // Hopefull this will work
     return cell;
 }
@@ -106,7 +115,7 @@
 -(CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath
 {
     CGFloat descriptionHeight = [self tableView:tableView heightForLabelAtIndexPath:indexPath];
-    return 75 + descriptionHeight;
+    return 80 + descriptionHeight;
 }
 /*
 // Override to support conditional editing of the table view.

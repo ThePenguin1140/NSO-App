@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="2.0" toolsVersion="2844" systemVersion="12C54" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" initialViewController="2">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="2.0" toolsVersion="2844" systemVersion="11G63" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" initialViewController="2">
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="1930"/>
     </dependencies>
@@ -226,20 +226,7 @@
                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                     </tabBar>
                     <connections>
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
                         <segue destination="bc0-Ut-oJR" kind="relationship" relationship="viewControllers" id="Dxo-Cw-mCR"/>
->>>>>>> 505443adcff2803f3bc8c8fde7402f5281a19497
-                        <segue destination="kKa-gb-JTY" kind="relationship" relationship="viewControllers" id="duR-Ja-8UP"/>
-                        <segue destination="rg7-4b-T50" kind="relationship" relationship="viewControllers" id="t8H-oP-KJS"/>
-                        <segue destination="n5p-87-1IU" kind="relationship" relationship="viewControllers" id="KYu-3A-sou"/>
-<<<<<<< HEAD
-=======
->>>>>>> parent of b8cb7d2... -Event Scheduler
-                        <segue destination="bc0-Ut-oJR" kind="relationship" relationship="viewControllers" id="Dxo-Cw-mCR"/>
-=======
->>>>>>> 505443adcff2803f3bc8c8fde7402f5281a19497
                         <segue destination="3sY-td-oA3" kind="relationship" relationship="viewControllers" id="WZ3-9E-pQO"/>
                         <segue destination="uja-vq-o7o" kind="relationship" relationship="viewControllers" id="01L-Yt-z26"/>
                         <segue destination="kKa-gb-JTY" kind="relationship" relationship="viewControllers" id="duR-Ja-8UP"/>
@@ -277,14 +264,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="XdU-Oc-A0i" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-<<<<<<< HEAD
-<<<<<<< HEAD
             <point key="canvasLocation" x="1481" y="-1401"/>
-=======
-            <point key="canvasLocation" x="473" y="-289"/>
->>>>>>> 505443adcff2803f3bc8c8fde7402f5281a19497
-=======
-            <point key="canvasLocation" x="705" y="-185"/>
         </scene>
         <!--Table View Controller - Item-->
         <scene sceneID="jbS-d9-2ea">
@@ -315,7 +295,6 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="7uQ-5x-5zJ" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="410" y="-512"/>
->>>>>>> parent of b8cb7d2... -Event Scheduler
         </scene>
         <!--Campus Info View Controller - Campus Info-->
         <scene sceneID="0nZ-Xc-vBD">
@@ -370,14 +349,7 @@
         <image name="NSOWelcome.jpg" width="1000" height="288"/>
         <image name="campusInfo.png" width="30" height="30"/>
         <image name="contacts.png" width="30" height="30"/>
-<<<<<<< HEAD
-<<<<<<< HEAD
-        <image name="eventScheduler.png" width="30" height="30"/>
-=======
         <image name="eventsIcon.png" width="30" height="30"/>
->>>>>>> 505443adcff2803f3bc8c8fde7402f5281a19497
-=======
->>>>>>> parent of b8cb7d2... -Event Scheduler
         <image name="mapIcon.png" width="30" height="30"/>
     </resources>
     <classes>

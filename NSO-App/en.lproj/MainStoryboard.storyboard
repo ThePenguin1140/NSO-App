@@ -380,11 +380,11 @@ AQABAAEAAQAB//+dkAEA//+PgAAE//+dkAEI//+dkAEMUERUAFBTVABQV1QAUFBUAAAAAAEAAAABA
             </objects>
             <point key="canvasLocation" x="826" y="127"/>
         </scene>
-        <!--Navigation Controller - Item-->
+        <!--Navigation Controller - Alarms-->
         <scene sceneID="ady-LV-oMJ">
             <objects>
                 <navigationController definesPresentationContext="YES" id="8vc-wg-qvD" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="Item" id="2of-ek-DCM"/>
+                    <tabBarItem key="tabBarItem" title="Alarms" image="eventScheduler.png" id="2of-ek-DCM"/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="nqU-ZM-rf9">
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
@@ -478,6 +478,7 @@ AQABAAEAAQAB//+dkAEA//+PgAAE//+dkAEI//+dkAEMUERUAFBTVABQV1QAUFBUAAAAAAEAAAABA
         <image name="NSOWelcome.jpg" width="1000" height="288"/>
         <image name="campusInfo.png" width="30" height="30"/>
         <image name="contacts.png" width="30" height="30"/>
+        <image name="eventScheduler.png" width="30" height="30"/>
         <image name="eventsIcon.png" width="30" height="30"/>
         <image name="mapIcon.png" width="30" height="30"/>
     </resources>

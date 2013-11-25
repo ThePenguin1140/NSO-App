@@ -70,15 +70,12 @@
     if(cell==nil) {
         cell = [[EventCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:CellIdentifier];
     }
-    CGSize maximumSize = CGSizeMake(280, 10000);
-    
-    CGSize labelHeightSize = [[[eventArray objectAtIndex:indexPath.row] eventDescription] sizeWithFont:[UIFont fontWithName:@"Helvetica" size:14.0f] constrainedToSize:maximumSize lineBreakMode:NSLineBreakByWordWrapping];
-    CGFloat labelHeight = labelHeightSize.height;
-    
+   
+    //dynamically allocates the description label height
     cell.description.frame = CGRectMake(cell.description.frame.origin.x,
                                              cell.description.frame.origin.y,
                                              cell.description.frame.size.width,
-                                             labelHeight);
+                                             [self tableView:tableView heightForLabelAtIndexPath:indexPath]);
 
     // Configure the cell...
     //get the event object
@@ -95,6 +92,22 @@
     return cell;
 }
 
+// returns the height of a number of lines of a string based on font, font size, width, and wrapping type
+-(CGFloat)tableView:(UITableView *)tableView heightForLabelAtIndexPath:(NSIndexPath *)indexPath
+{
+    CGSize maximumSize = CGSizeMake(280, 10000);
+    
+    CGSize labelHeightSize = [[[eventArray objectAtIndex:indexPath.row] eventDescription] sizeWithFont:[UIFont fontWithName:@"Helvetica" size:14.0f] constrainedToSize:maximumSize lineBreakMode:NSLineBreakByWordWrapping];
+    CGFloat labelHeight = labelHeightSize.height;
+    return labelHeight;
+}
+
+// returns the height of a cell, in this case dependent on description label
+-(CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath
+{
+    CGFloat descriptionHeight = [self tableView:tableView heightForLabelAtIndexPath:indexPath];
+    return 75 + descriptionHeight;
+}
 /*
 // Override to support conditional editing of the table view.
 - (BOOL)tableView:(UITableView *)tableView canEditRowAtIndexPath:(NSIndexPath *)indexPath

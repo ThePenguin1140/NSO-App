@@ -78,16 +78,16 @@
         <scene sceneID="Xms-Qf-0UL">
             <objects>
                 <tableViewController storyboardIdentifier="EventController" useStoryboardIdentifierAsRestorationIdentifier="YES" id="LY4-HJ-Ore" customClass="EventViewController" sceneMemberID="viewController">
-                    <tableView key="view" opaque="NO" clipsSubviews="YES" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" showsSelectionImmediatelyOnTouchBegin="NO" rowHeight="181" sectionHeaderHeight="22" sectionFooterHeight="22" id="k27-o0-iuT">
+                    <tableView key="view" opaque="NO" clipsSubviews="YES" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" showsSelectionImmediatelyOnTouchBegin="NO" rowHeight="142" sectionHeaderHeight="22" sectionFooterHeight="22" id="k27-o0-iuT">
                         <rect key="frame" x="0.0" y="20" width="320" height="548"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" cocoaTouchSystemColor="tableCellGroupedBackgroundColor"/>
                         <prototypes>
-                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" horizontalHuggingPriority="1000" verticalHuggingPriority="1000" restorationIdentifier="myEventCell" selectionStyle="none" indentationWidth="10" reuseIdentifier="myEventCell" rowHeight="165" id="JcB-zr-Gpz" customClass="EventCell">
-                                <rect key="frame" x="0.0" y="22" width="320" height="165"/>
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" horizontalHuggingPriority="1000" verticalHuggingPriority="1" restorationIdentifier="myEventCell" selectionStyle="none" indentationWidth="10" reuseIdentifier="myEventCell" rowHeight="142" id="JcB-zr-Gpz" customClass="EventCell">
+                                <rect key="frame" x="0.0" y="22" width="320" height="142"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
-                                    <rect key="frame" x="0.0" y="0.0" width="320" height="164"/>
+                                    <rect key="frame" x="0.0" y="0.0" width="320" height="141"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                     <subviews>
                                         <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="Title" lineBreakMode="wordWrap" numberOfLines="2" baselineAdjustment="alignBaselines" minimumFontSize="12" preferredMaxLayoutWidth="290" translatesAutoresizingMaskIntoConstraints="NO" id="a4O-Bd-HYn">

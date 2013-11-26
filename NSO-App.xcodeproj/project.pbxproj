@@ -13,9 +13,6 @@
 		7C62DCE5182AB09B0003AD91 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 7C62DCE3182AB09B0003AD91 /* InfoPlist.strings */; };
 		7C62DCE7182AB09B0003AD91 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 7C62DCE6182AB09B0003AD91 /* main.m */; };
 		7C62DCEB182AB09B0003AD91 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 7C62DCEA182AB09B0003AD91 /* AppDelegate.m */; };
-		7C62DCED182AB09B0003AD91 /* Default.png in Resources */ = {isa = PBXBuildFile; fileRef = 7C62DCEC182AB09B0003AD91 /* Default.png */; };
-		7C62DCEF182AB09B0003AD91 /* Default@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 7C62DCEE182AB09B0003AD91 /* Default@2x.png */; };
-		7C62DCF1182AB09B0003AD91 /* Default-568h@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 7C62DCF0182AB09B0003AD91 /* Default-568h@2x.png */; };
 		7C62DCF4182AB09B0003AD91 /* MainStoryboard.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7C62DCF2182AB09B0003AD91 /* MainStoryboard.storyboard */; };
 		7C62DCF7182AB09B0003AD91 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 7C62DCF6182AB09B0003AD91 /* ViewController.m */; };
 		7C62DD0F182ABCDE0003AD91 /* CampusInfoViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 7C62DD0E182ABCDE0003AD91 /* CampusInfoViewController.m */; };
@@ -26,6 +23,10 @@
 		7C653664183D38530009953E /* Day.m in Sources */ = {isa = PBXBuildFile; fileRef = 7C653663183D38530009953E /* Day.m */; };
 		7C653666183D3A0F0009953E /* CoreData.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7C653665183D3A0F0009953E /* CoreData.framework */; };
 		7C7C27CF183FD716007DCA52 /* eventsIcon.png in Resources */ = {isa = PBXBuildFile; fileRef = 7C7C27CE183FD716007DCA52 /* eventsIcon.png */; };
+		7C8DEEE61845171900D02E66 /* Orientation-badge.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 7C8DEEE51845171900D02E66 /* Orientation-badge.jpg */; };
+		7C8DEEE818451A2700D02E66 /* Default.png in Resources */ = {isa = PBXBuildFile; fileRef = 7C8DEEE718451A2700D02E66 /* Default.png */; };
+		7C8DEEEA18451AA500D02E66 /* Default@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 7C8DEEE918451AA500D02E66 /* Default@2x.png */; };
+		7C8DEEEC18451AF100D02E66 /* Default-568h@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 7C8DEEEB18451AF100D02E66 /* Default-568h@2x.png */; };
 		7CC71904183D63EB007F7E52 /* DayViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 7CC71903183D63EB007F7E52 /* DayViewController.m */; };
 		7CC71908183D6410007F7E52 /* EventViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 7CC71907183D6410007F7E52 /* EventViewController.m */; };
 		810FA62C183994180094E771 /* NSOWelcome.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 810FA62B183994180094E771 /* NSOWelcome.jpg */; };
@@ -59,9 +60,6 @@
 		7C62DCE8182AB09B0003AD91 /* NSO-App-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "NSO-App-Prefix.pch"; sourceTree = "<group>"; };
 		7C62DCE9182AB09B0003AD91 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		7C62DCEA182AB09B0003AD91 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
-		7C62DCEC182AB09B0003AD91 /* Default.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Default.png; sourceTree = "<group>"; };
-		7C62DCEE182AB09B0003AD91 /* Default@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default@2x.png"; sourceTree = "<group>"; };
-		7C62DCF0182AB09B0003AD91 /* Default-568h@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default-568h@2x.png"; sourceTree = "<group>"; };
 		7C62DCF3182AB09B0003AD91 /* en */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = en; path = en.lproj/MainStoryboard.storyboard; sourceTree = "<group>"; };
 		7C62DCF5182AB09B0003AD91 /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
 		7C62DCF6182AB09B0003AD91 /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
@@ -77,6 +75,10 @@
 		7C653663183D38530009953E /* Day.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = Day.m; path = ../Day.m; sourceTree = "<group>"; };
 		7C653665183D3A0F0009953E /* CoreData.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreData.framework; path = System/Library/Frameworks/CoreData.framework; sourceTree = SDKROOT; };
 		7C7C27CE183FD716007DCA52 /* eventsIcon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = eventsIcon.png; sourceTree = "<group>"; };
+		7C8DEEE51845171900D02E66 /* Orientation-badge.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "Orientation-badge.jpg"; sourceTree = "<group>"; };
+		7C8DEEE718451A2700D02E66 /* Default.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = Default.png; path = ../Default.png; sourceTree = "<group>"; };
+		7C8DEEE918451AA500D02E66 /* Default@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "Default@2x.png"; path = "../Default@2x.png"; sourceTree = "<group>"; };
+		7C8DEEEB18451AF100D02E66 /* Default-568h@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "Default-568h@2x.png"; path = "../Default-568h@2x.png"; sourceTree = "<group>"; };
 		7CC71902183D63EB007F7E52 /* DayViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DayViewController.h; sourceTree = "<group>"; };
 		7CC71903183D63EB007F7E52 /* DayViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DayViewController.m; sourceTree = "<group>"; };
 		7CC71906183D6410007F7E52 /* EventViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EventViewController.h; sourceTree = "<group>"; };
@@ -190,14 +192,16 @@
 		7C62DCE1182AB09B0003AD91 /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				7C8DEEEB18451AF100D02E66 /* Default-568h@2x.png */,
+				7C8DEEE918451AA500D02E66 /* Default@2x.png */,
+				7C8DEEE718451A2700D02E66 /* Default.png */,
+				7C8DEEE51845171900D02E66 /* Orientation-badge.jpg */,
 				7C7C27CE183FD716007DCA52 /* eventsIcon.png */,
 				7C62DCE2182AB09B0003AD91 /* NSO-App-Info.plist */,
 				81D69FCD183E58D600A4B8EE /* Menu.plist */,
 				7C62DCE3182AB09B0003AD91 /* InfoPlist.strings */,
 				7C62DCE6182AB09B0003AD91 /* main.m */,
 				7C62DCE8182AB09B0003AD91 /* NSO-App-Prefix.pch */,
-				7C62DCEC182AB09B0003AD91 /* Default.png */,
-				7C62DCEE182AB09B0003AD91 /* Default@2x.png */,
 				8188895B1843C793008FCD13 /* eventScheduler.png */,
 				810FA632183997C00094E771 /* waveMenu.jpg */,
 				810FA6361839A60F0094E771 /* menu.pdf */,
@@ -207,7 +211,6 @@
 				81A67893183D320C0019160F /* mapIcon.png */,
 				810FA63A1839B0640094E771 /* campusMap1.pdf */,
 				810FA62B183994180094E771 /* NSOWelcome.jpg */,
-				7C62DCF0182AB09B0003AD91 /* Default-568h@2x.png */,
 				816E7D3E183DB19600266F64 /* library.html */,
 				816E7D3B183DB18700266F64 /* wave.html */,
 			);
@@ -266,9 +269,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				7C62DCE5182AB09B0003AD91 /* InfoPlist.strings in Resources */,
-				7C62DCED182AB09B0003AD91 /* Default.png in Resources */,
-				7C62DCEF182AB09B0003AD91 /* Default@2x.png in Resources */,
-				7C62DCF1182AB09B0003AD91 /* Default-568h@2x.png in Resources */,
 				7C62DCF4182AB09B0003AD91 /* MainStoryboard.storyboard in Resources */,
 				7C62DD14182ABFA00003AD91 /* README in Resources */,
 				810FA62C183994180094E771 /* NSOWelcome.jpg in Resources */,
@@ -284,6 +284,10 @@
 				81D69FCE183E58D600A4B8EE /* Menu.plist in Resources */,
 				7C7C27CF183FD716007DCA52 /* eventsIcon.png in Resources */,
 				8188895C1843C794008FCD13 /* eventScheduler.png in Resources */,
+				7C8DEEE61845171900D02E66 /* Orientation-badge.jpg in Resources */,
+				7C8DEEE818451A2700D02E66 /* Default.png in Resources */,
+				7C8DEEEA18451AA500D02E66 /* Default@2x.png in Resources */,
+				7C8DEEEC18451AF100D02E66 /* Default-568h@2x.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

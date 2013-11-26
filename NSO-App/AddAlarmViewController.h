@@ -8,7 +8,7 @@
 
 #import <UIKit/UIKit.h>
 
-@interface AddAlarmViewController : UIViewController
+@interface AddAlarmViewController : UIViewController <UITextFieldDelegate>
 @property (weak, nonatomic) IBOutlet UITextField *itemText;
 @property (weak, nonatomic) IBOutlet UIDatePicker *datePicker;
 - (IBAction)save:(id)sender;

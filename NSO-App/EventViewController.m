@@ -63,63 +63,88 @@
     return [eventArray count];
 }
 
+// Initialize the cell
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
 {
+    // set cell identifier for reusable cells
     static NSString *CellIdentifier = @"myEventCell";
+    // cell is of custom type EventCell
     EventCell *cell = [tableView dequeueReusableCellWithIdentifier:CellIdentifier];
     if(cell==nil) {
+        // if cell is new then allocate new EventCell
         cell = [[EventCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:CellIdentifier];
     }
-   
-    //dynamically allocates the description label height
+    
+    // retrieves the cells contents
     NSArray *subview = [[cell contentView] subviews];
+    // for cell content debugging
+    /*
     for (UILabel *a in subview)
         NSLog(@"CELL CONTENT BEFORE LABEL %@",a.text);
+     */
+    
+    //creates a new UILabelView
+    // Frame origin is at precalculated coordinates,
+    // Frame width is width of cell - 100 pixles so that description fills cell even in landscape mode
+    // Frame height is based on the height that the event description would require
     UILabel *description = [[UILabel alloc] initWithFrame:CGRectMake(20,
                                              70,
                                              cell.frame.size.width-100,
                                                                      [self tableView:tableView heightForLabelAtIndexPath:indexPath])];
-
-
-    // Configure the cell...
-    //get the event object
+    
+    // get the event objects from the event array
     Event *event = [eventArray objectAtIndex:[indexPath row]];
 
-    description.lineBreakMode = NSLineBreakByWordWrapping;
+    // configure the description label
+    description.lineBreakMode = NSLineBreakByWordWrapping; 
     CGSize heightOfLine = [[event eventDescription]sizeWithFont:[UIFont fontWithName:@"Helvetica" size:14.0f]];
+    // calculates number of lines based on how high one line would be divided by the total height as calculated previously
     description.numberOfLines = ([self tableView:tableView heightForLabelAtIndexPath:indexPath]/heightOfLine.height)+1;
     [description setTextAlignment:NSTextAlignmentLeft];
     [description setFont:[UIFont fontWithName:@"Helvetica" size:14.0f]];
+    // set the background to match the tableview
     [description setBackgroundColor:tableView.backgroundColor];
     
     //set the cells text and subtitle
     cell.title.text = event.eventTitle;
-    NSLog(@"Cell title %@",cell.title.text);
+    //NSLog(@"Cell title %@",cell.title.text);
     cell.time.text = event.eventTime;
     cell.location.text = event.eventLocation;
+    // if the cell is dequed and the description label exists in the cell
+    // it needs to be removed from the cell in order for this to function properly
     if([subview count]==4)
         [[subview objectAtIndex:3] removeFromSuperview];
     description.text = event.eventDescription;
-    NSLog(@"Cell description %@", description.text);
+    //NSLog(@"Cell description %@", description.text);
     [[cell contentView]addSubview:description];
+    // for debug
+    /*
     for (UILabel *a in subview)
         NSLog(@"CELL CONTENT AFTER LABEL %@",a.text);
+    */
     return cell;
 }
 
-// returns the height of a number of lines of a string based on font, font size, width, and wrapping type
+// returns the height of a number of lines of a string
 -(CGFloat)tableView:(UITableView *)tableView heightForLabelAtIndexPath:(NSIndexPath *)indexPath
 {
+    // retrieve cell
     EventCell *cell = [tableView dequeueReusableCellWithIdentifier:@"myEventCell"];
-    CGSize maximumSize = CGSizeMake(cell.frame.size.width-100,cell.frame.size.height);
+    // calculate maximum size of description based on cell size
+    CGSize maximumSize = CGSizeMake(cell.frame.size.width-100,cell.frame.size.height-70);
+    // calculates the size (in pixles) high text would be based on NSStrings sizeWithFont: size: constrainedToSize: lineBreakMode:
+    // method, which takes into account font, line break mode, and size of container
     CGSize labelHeightSize = [[[eventArray objectAtIndex:indexPath.row] eventDescription] sizeWithFont:[UIFont fontWithName:@"Helvetica" size:14.0f] constrainedToSize:maximumSize lineBreakMode:NSLineBreakByWordWrapping];
+    // get the height of the description from the CGSize object
     CGFloat labelHeight = labelHeightSize.height;
     return labelHeight;
 }
 
-// returns the height of a cell, in this case dependent on description label
+// returns the height of a cell, called when cell is instantiated
 -(CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath
 {
+    // returns the height of a cell based on how high the description is
+    // plus 80 pixles for buffer
     CGFloat descriptionHeight = [self tableView:tableView heightForLabelAtIndexPath:indexPath];
     return 80 + descriptionHeight;
 }

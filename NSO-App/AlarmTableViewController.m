@@ -10,7 +10,7 @@
 
 @interface AlarmTableViewController ()
 - (void)reloadTable;
-
+@property (nonatomic, strong) NSMutableArray *localNotifications;
 @end
 
 @implementation AlarmTableViewController
@@ -32,6 +32,8 @@
                                              selector:@selector(reloadTable)
                                                  name:@"reloadData"
                                                object:nil];
+    
+    
 }
 
 - (void)didReceiveMemoryWarning
@@ -75,14 +77,27 @@
     [self.tableView reloadData];
 }
 
-/*
- // Override to support conditional editing of the table view.
+
+- (void)tableView:(UITableView *)tableView commitEditingStyle:(UITableViewCellEditingStyle)editingStyle forRowAtIndexPath:(NSIndexPath *)indexPath
+{
+    if (editingStyle == UITableViewCellEditingStyleDelete)
+    {
+       
+        // Delete the row from the data source
+        [tableView deleteRowsAtIndexPaths:@[indexPath] withRowAnimation:UITableViewRowAnimationAutomatic];
+        [self.localNotifications removeObjectAtIndex:indexPath.row];
+        
+
+    }
+}
+
+
  - (BOOL)tableView:(UITableView *)tableView canEditRowAtIndexPath:(NSIndexPath *)indexPath
  {
  // Return NO if you do not want the specified item to be editable.
  return YES;
  }
- */
+ 
 
 /*
  // Override to support editing the table view.

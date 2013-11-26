@@ -17,6 +17,7 @@
 @property (nonatomic, retain) NSString * eventLocation;
 @property (nonatomic, retain) NSString * eventTime;
 @property (nonatomic, retain) NSString * eventTitle;
+@property (nonatomic, retain) NSNumber * eventHours;
 @property (nonatomic, retain) Day *day;
 
 @end

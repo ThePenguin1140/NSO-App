@@ -217,7 +217,7 @@
     [fetchRequest setPredicate:predicate];
 
     //add sort desc
-    NSSortDescriptor *sortDesc = [[NSSortDescriptor alloc]initWithKey:@"eventTime" ascending:YES];
+    NSSortDescriptor *sortDesc = [[NSSortDescriptor alloc]initWithKey:@"eventHours" ascending:YES];
     NSArray *sortList = [[NSArray alloc]initWithObjects:sortDesc,nil];
     [fetchRequest setSortDescriptors:sortList];
 

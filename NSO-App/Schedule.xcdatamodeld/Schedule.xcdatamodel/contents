@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
-<model name="" userDefinedModelVersionIdentifier="" type="com.apple.IDECoreDataModeler.DataModel" documentVersion="1.0" lastSavedToolsVersion="1811" systemVersion="12C54" minimumToolsVersion="Automatic" macOSVersion="Automatic" iOSVersion="Automatic">
+<model name="" userDefinedModelVersionIdentifier="" type="com.apple.IDECoreDataModeler.DataModel" documentVersion="1.0" lastSavedToolsVersion="1811" systemVersion="11G63" minimumToolsVersion="Automatic" macOSVersion="Automatic" iOSVersion="Automatic">
     <entity name="Day" representedClassName="Day" isAbstract="YES" syncable="YES">
         <attribute name="date" optional="YES" attributeType="String" syncable="YES"/>
         <attribute name="name" optional="YES" attributeType="String" syncable="YES"/>
@@ -7,6 +7,7 @@
     </entity>
     <entity name="Event" representedClassName="Event" isAbstract="YES" syncable="YES">
         <attribute name="eventDescription" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="eventHours" optional="YES" attributeType="Integer 32" defaultValueString="0" syncable="YES"/>
         <attribute name="eventLocation" optional="YES" attributeType="String" syncable="YES"/>
         <attribute name="eventTime" optional="YES" attributeType="String" syncable="YES"/>
         <attribute name="eventTitle" optional="YES" attributeType="String" syncable="YES"/>
@@ -14,6 +15,6 @@
     </entity>
     <elements>
         <element name="Day" positionX="-47" positionY="87" width="128" height="88"/>
-        <element name="Event" positionX="349" positionY="162" width="128" height="118"/>
+        <element name="Event" positionX="349" positionY="162" width="128" height="135"/>
     </elements>
 </model>

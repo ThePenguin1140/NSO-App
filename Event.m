@@ -6,9 +6,9 @@
 //  Copyright (c) 2013 Jason&Cory. All rights reserved.
 //
 
-#import "Event.h"
-#import "Day.h"
 
+#import "Day.h"
+#import "Event.h"
 
 @implementation Event
 
@@ -16,6 +16,7 @@
 @dynamic eventLocation;
 @dynamic eventTime;
 @dynamic eventTitle;
+@dynamic eventHours;
 @dynamic day;
 
 @end

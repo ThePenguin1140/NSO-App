@@ -10,7 +10,6 @@
 
 @interface AlarmTableViewController ()
 - (void)reloadTable;
-@property (nonatomic, strong) NSMutableArray *localNotifications;
 @end
 
 @implementation AlarmTableViewController
@@ -82,10 +81,11 @@
 {
     if (editingStyle == UITableViewCellEditingStyleDelete)
     {
-       
+        NSNotification *notification = [[[UIApplication sharedApplication] scheduledLocalNotifications] objectAtIndex:indexPath.row];
         // Delete the row from the data source
+        [[UIApplication sharedApplication] cancelLocalNotification:notification];
         [tableView deleteRowsAtIndexPaths:@[indexPath] withRowAnimation:UITableViewRowAnimationAutomatic];
-        [self.localNotifications removeObjectAtIndex:indexPath.row];
+        
         
 
     }

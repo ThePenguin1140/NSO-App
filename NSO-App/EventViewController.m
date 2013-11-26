@@ -72,11 +72,13 @@
     }
    
     //dynamically allocates the description label height
+    NSArray *subview = [[cell contentView] subviews];
+    for (UILabel *a in subview)
+        NSLog(@"CELL CONTENT BEFORE LABEL %@",a.text);
     UILabel *description = [[UILabel alloc] initWithFrame:CGRectMake(20,
                                              70,
                                              cell.frame.size.width-100,
-                                             [self tableView:tableView heightForLabelAtIndexPath:indexPath])];
-    [[cell contentView]addSubview:description];
+                                                                     [self tableView:tableView heightForLabelAtIndexPath:indexPath])];
 
 
     // Configure the cell...
@@ -86,24 +88,22 @@
     description.lineBreakMode = NSLineBreakByWordWrapping;
     CGSize heightOfLine = [[event eventDescription]sizeWithFont:[UIFont fontWithName:@"Helvetica" size:14.0f]];
     description.numberOfLines = ([self tableView:tableView heightForLabelAtIndexPath:indexPath]/heightOfLine.height)+1;
-    NSLog(@"Number of lines for description %i",description.numberOfLines);
-    //description.backgroundColor = [UIColor magentaColor];
     [description setTextAlignment:NSTextAlignmentLeft];
     [description setFont:[UIFont fontWithName:@"Helvetica" size:14.0f]];
     [description setBackgroundColor:tableView.backgroundColor];
     
     //set the cells text and subtitle
-    NSLog(@"Event title %@",event.eventTitle);
     cell.title.text = event.eventTitle;
     NSLog(@"Cell title %@",cell.title.text);
     cell.time.text = event.eventTime;
     cell.location.text = event.eventLocation;
+    if([subview count]==4)
+        [[subview objectAtIndex:3] removeFromSuperview];
     description.text = event.eventDescription;
-    NSLog(@"Cell desciption height: %f",[self tableView:tableView heightForLabelAtIndexPath:indexPath]);
-    NSLog(@"Description label height: %f", description.frame.size.height);
     NSLog(@"Cell description %@", description.text);
-    // Hopefull this will work
-    NSLog(@"Cell background color %@",[tableView backgroundColor]);
+    [[cell contentView]addSubview:description];
+    for (UILabel *a in subview)
+        NSLog(@"CELL CONTENT AFTER LABEL %@",a.text);
     return cell;
 }
 

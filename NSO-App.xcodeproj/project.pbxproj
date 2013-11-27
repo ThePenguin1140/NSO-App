@@ -29,10 +29,6 @@
 		7C8DEEEC18451AF100D02E66 /* Default-568h@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 7C8DEEEB18451AF100D02E66 /* Default-568h@2x.png */; };
 		7CC71904183D63EB007F7E52 /* DayViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 7CC71903183D63EB007F7E52 /* DayViewController.m */; };
 		7CC71908183D6410007F7E52 /* EventViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 7CC71907183D6410007F7E52 /* EventViewController.m */; };
-		810FA62C183994180094E771 /* NSOWelcome.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 810FA62B183994180094E771 /* NSOWelcome.jpg */; };
-		810FA633183997C00094E771 /* waveMenu.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 810FA632183997C00094E771 /* waveMenu.jpg */; };
-		810FA6351839A1B40094E771 /* campusMap.pdf in Resources */ = {isa = PBXBuildFile; fileRef = 810FA6341839A1B40094E771 /* campusMap.pdf */; };
-		810FA6371839A60F0094E771 /* menu.pdf in Resources */ = {isa = PBXBuildFile; fileRef = 810FA6361839A60F0094E771 /* menu.pdf */; };
 		810FA6391839AF140094E771 /* campusInfo.png in Resources */ = {isa = PBXBuildFile; fileRef = 810FA6381839AF140094E771 /* campusInfo.png */; };
 		810FA63B1839B0640094E771 /* campusMap1.pdf in Resources */ = {isa = PBXBuildFile; fileRef = 810FA63A1839B0640094E771 /* campusMap1.pdf */; };
 		816E7D3C183DB18700266F64 /* wave.html in Resources */ = {isa = PBXBuildFile; fileRef = 816E7D3B183DB18700266F64 /* wave.html */; };
@@ -41,6 +37,10 @@
 		818889681843CAC6008FCD13 /* AddAlarmViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 818889671843CAC6008FCD13 /* AddAlarmViewController.m */; };
 		8188896B1843CC06008FCD13 /* AlarmTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8188896A1843CC06008FCD13 /* AlarmTableViewController.m */; };
 		81A67894183D320C0019160F /* mapIcon.png in Resources */ = {isa = PBXBuildFile; fileRef = 81A67893183D320C0019160F /* mapIcon.png */; };
+		81D5669D184694CE00A95836 /* menu1.pdf in Resources */ = {isa = PBXBuildFile; fileRef = 81D5669B184694CE00A95836 /* menu1.pdf */; };
+		81D5669E184694CE00A95836 /* menu2.pdf in Resources */ = {isa = PBXBuildFile; fileRef = 81D5669C184694CE00A95836 /* menu2.pdf */; };
+		81D566A418469A9000A95836 /* startIcon.png in Resources */ = {isa = PBXBuildFile; fileRef = 81D566A318469A8F00A95836 /* startIcon.png */; };
+		81D566A618469B9D00A95836 /* campusMap.pdf in Resources */ = {isa = PBXBuildFile; fileRef = 81D566A518469B9D00A95836 /* campusMap.pdf */; };
 		81D69FC5183E559A00A4B8EE /* AddressViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 81D69FC4183E559A00A4B8EE /* AddressViewController.m */; };
 		81D69FC9183E560100A4B8EE /* AddressBook.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 81D69FC7183E560000A4B8EE /* AddressBook.framework */; };
 		81D69FCA183E560100A4B8EE /* AddressBookUI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 81D69FC8183E560000A4B8EE /* AddressBookUI.framework */; };
@@ -83,10 +83,6 @@
 		7CC71903183D63EB007F7E52 /* DayViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DayViewController.m; sourceTree = "<group>"; };
 		7CC71906183D6410007F7E52 /* EventViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EventViewController.h; sourceTree = "<group>"; };
 		7CC71907183D6410007F7E52 /* EventViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EventViewController.m; sourceTree = "<group>"; };
-		810FA62B183994180094E771 /* NSOWelcome.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = NSOWelcome.jpg; sourceTree = "<group>"; };
-		810FA632183997C00094E771 /* waveMenu.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = waveMenu.jpg; sourceTree = "<group>"; };
-		810FA6341839A1B40094E771 /* campusMap.pdf */ = {isa = PBXFileReference; lastKnownFileType = image.pdf; path = campusMap.pdf; sourceTree = "<group>"; };
-		810FA6361839A60F0094E771 /* menu.pdf */ = {isa = PBXFileReference; lastKnownFileType = image.pdf; path = menu.pdf; sourceTree = "<group>"; };
 		810FA6381839AF140094E771 /* campusInfo.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = campusInfo.png; sourceTree = "<group>"; };
 		810FA63A1839B0640094E771 /* campusMap1.pdf */ = {isa = PBXFileReference; lastKnownFileType = image.pdf; path = campusMap1.pdf; sourceTree = "<group>"; };
 		816E7D3B183DB18700266F64 /* wave.html */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.html; path = wave.html; sourceTree = "<group>"; };
@@ -97,6 +93,10 @@
 		818889691843CC06008FCD13 /* AlarmTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AlarmTableViewController.h; sourceTree = "<group>"; };
 		8188896A1843CC06008FCD13 /* AlarmTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AlarmTableViewController.m; sourceTree = "<group>"; };
 		81A67893183D320C0019160F /* mapIcon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = mapIcon.png; sourceTree = "<group>"; };
+		81D5669B184694CE00A95836 /* menu1.pdf */ = {isa = PBXFileReference; lastKnownFileType = image.pdf; path = menu1.pdf; sourceTree = "<group>"; };
+		81D5669C184694CE00A95836 /* menu2.pdf */ = {isa = PBXFileReference; lastKnownFileType = image.pdf; path = menu2.pdf; sourceTree = "<group>"; };
+		81D566A318469A8F00A95836 /* startIcon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = startIcon.png; path = ../startIcon.png; sourceTree = "<group>"; };
+		81D566A518469B9D00A95836 /* campusMap.pdf */ = {isa = PBXFileReference; lastKnownFileType = image.pdf; path = campusMap.pdf; sourceTree = "<group>"; };
 		81D69FC3183E559A00A4B8EE /* AddressViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AddressViewController.h; sourceTree = "<group>"; };
 		81D69FC4183E559A00A4B8EE /* AddressViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AddressViewController.m; sourceTree = "<group>"; };
 		81D69FC7183E560000A4B8EE /* AddressBook.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AddressBook.framework; path = System/Library/Frameworks/AddressBook.framework; sourceTree = SDKROOT; };
@@ -127,8 +127,6 @@
 		7C62DCCB182AB09B0003AD91 = {
 			isa = PBXGroup;
 			children = (
-				81D69FC7183E560000A4B8EE /* AddressBook.framework */,
-				81D69FC8183E560000A4B8EE /* AddressBookUI.framework */,
 				7C62DCE0182AB09B0003AD91 /* NSO-App */,
 				7C62DCD9182AB09B0003AD91 /* Frameworks */,
 				7C62DCD7182AB09B0003AD91 /* Products */,
@@ -146,6 +144,8 @@
 		7C62DCD9182AB09B0003AD91 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				81D69FC7183E560000A4B8EE /* AddressBook.framework */,
+				81D69FC8183E560000A4B8EE /* AddressBookUI.framework */,
 				7C653665183D3A0F0009953E /* CoreData.framework */,
 				7C62DCDA182AB09B0003AD91 /* UIKit.framework */,
 				7C62DCDC182AB09B0003AD91 /* Foundation.framework */,
@@ -192,29 +192,37 @@
 		7C62DCE1182AB09B0003AD91 /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				81D566A218469A0D00A95836 /* Icons */,
 				7C8DEEEB18451AF100D02E66 /* Default-568h@2x.png */,
 				7C8DEEE918451AA500D02E66 /* Default@2x.png */,
+				81D566A518469B9D00A95836 /* campusMap.pdf */,
+				81D5669C184694CE00A95836 /* menu2.pdf */,
 				7C8DEEE718451A2700D02E66 /* Default.png */,
+				81D5669B184694CE00A95836 /* menu1.pdf */,
 				7C8DEEE51845171900D02E66 /* Orientation-badge.jpg */,
-				7C7C27CE183FD716007DCA52 /* eventsIcon.png */,
 				7C62DCE2182AB09B0003AD91 /* NSO-App-Info.plist */,
 				81D69FCD183E58D600A4B8EE /* Menu.plist */,
 				7C62DCE3182AB09B0003AD91 /* InfoPlist.strings */,
 				7C62DCE6182AB09B0003AD91 /* main.m */,
 				7C62DCE8182AB09B0003AD91 /* NSO-App-Prefix.pch */,
-				8188895B1843C793008FCD13 /* eventScheduler.png */,
-				810FA632183997C00094E771 /* waveMenu.jpg */,
-				810FA6361839A60F0094E771 /* menu.pdf */,
-				810FA6381839AF140094E771 /* campusInfo.png */,
-				810FA6341839A1B40094E771 /* campusMap.pdf */,
-				81D69FCB183E56E000A4B8EE /* contacts.png */,
-				81A67893183D320C0019160F /* mapIcon.png */,
 				810FA63A1839B0640094E771 /* campusMap1.pdf */,
-				810FA62B183994180094E771 /* NSOWelcome.jpg */,
 				816E7D3E183DB19600266F64 /* library.html */,
 				816E7D3B183DB18700266F64 /* wave.html */,
 			);
 			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		81D566A218469A0D00A95836 /* Icons */ = {
+			isa = PBXGroup;
+			children = (
+				81D566A318469A8F00A95836 /* startIcon.png */,
+				7C7C27CE183FD716007DCA52 /* eventsIcon.png */,
+				8188895B1843C793008FCD13 /* eventScheduler.png */,
+				810FA6381839AF140094E771 /* campusInfo.png */,
+				81D69FCB183E56E000A4B8EE /* contacts.png */,
+				81A67893183D320C0019160F /* mapIcon.png */,
+			);
+			name = Icons;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -271,10 +279,6 @@
 				7C62DCE5182AB09B0003AD91 /* InfoPlist.strings in Resources */,
 				7C62DCF4182AB09B0003AD91 /* MainStoryboard.storyboard in Resources */,
 				7C62DD14182ABFA00003AD91 /* README in Resources */,
-				810FA62C183994180094E771 /* NSOWelcome.jpg in Resources */,
-				810FA633183997C00094E771 /* waveMenu.jpg in Resources */,
-				810FA6351839A1B40094E771 /* campusMap.pdf in Resources */,
-				810FA6371839A60F0094E771 /* menu.pdf in Resources */,
 				810FA6391839AF140094E771 /* campusInfo.png in Resources */,
 				810FA63B1839B0640094E771 /* campusMap1.pdf in Resources */,
 				81A67894183D320C0019160F /* mapIcon.png in Resources */,
@@ -288,6 +292,10 @@
 				7C8DEEE818451A2700D02E66 /* Default.png in Resources */,
 				7C8DEEEA18451AA500D02E66 /* Default@2x.png in Resources */,
 				7C8DEEEC18451AF100D02E66 /* Default-568h@2x.png in Resources */,
+				81D5669D184694CE00A95836 /* menu1.pdf in Resources */,
+				81D5669E184694CE00A95836 /* menu2.pdf in Resources */,
+				81D566A418469A9000A95836 /* startIcon.png in Resources */,
+				81D566A618469B9D00A95836 /* campusMap.pdf in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

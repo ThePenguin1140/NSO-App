@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="2.0" toolsVersion="2844" systemVersion="11G63" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" initialViewController="2">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="2.0" toolsVersion="2844" systemVersion="12F45" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" initialViewController="2">
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="1930"/>
     </dependencies>
@@ -47,7 +47,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="4" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-796" y="-1274"/>
+            <point key="canvasLocation" x="-1204" y="-1322"/>
         </scene>
         <!--Day View Controller - Root View Controller-->
         <scene sceneID="RoJ-qg-2tx">
@@ -144,9 +144,9 @@
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="a2J-lg-pTz" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="879" y="-2616"/>
+            <point key="canvasLocation" x="871" y="-2562"/>
         </scene>
-        <!--Address View Controller - Contacts Table View Controller-->
+        <!--Address View Controller - Contacts-->
         <scene sceneID="yUu-Sf-1F0">
             <objects>
                 <tableViewController id="szZ-BB-8tO" customClass="AddressViewController" sceneMemberID="viewController">
@@ -183,11 +183,11 @@
                             </tableViewSection>
                         </sections>
                     </tableView>
-                    <navigationItem key="navigationItem" title="Contacts Table View Controller" id="N2c-FZ-MzF"/>
+                    <navigationItem key="navigationItem" title="Contacts" id="N2c-FZ-MzF"/>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="YIX-Iq-bPN" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1011" y="-1777"/>
+            <point key="canvasLocation" x="303" y="-1809"/>
         </scene>
         <!--Navigation Controller - Contacts-->
         <scene sceneID="dJD-Sy-qza">
@@ -203,13 +203,13 @@
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="97R-1R-EK5" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="479" y="-1777"/>
+            <point key="canvasLocation" x="-213" y="-1817"/>
         </scene>
-        <!--Navigation Controller - Item-->
+        <!--Navigation Controller - Events-->
         <scene sceneID="N0k-tj-mL5">
             <objects>
                 <navigationController definesPresentationContext="YES" id="kKa-gb-JTY" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="Item" image="eventsIcon.png" id="kD5-At-sTz"/>
+                    <tabBarItem key="tabBarItem" title="Events" image="eventsIcon.png" id="kD5-At-sTz"/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="gfP-zz-c7W">
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
@@ -219,7 +219,7 @@
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="9py-uf-CLL" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-251" y="-2202"/>
+            <point key="canvasLocation" x="-227" y="-2562"/>
         </scene>
         <!--Tab Bar Controller-->
         <scene sceneID="E1D-nL-OKZ">
@@ -232,16 +232,16 @@
                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                     </tabBar>
                     <connections>
-                        <segue destination="bc0-Ut-oJR" kind="relationship" relationship="viewControllers" id="Dxo-Cw-mCR"/>
                         <segue destination="kKa-gb-JTY" kind="relationship" relationship="viewControllers" id="duR-Ja-8UP"/>
                         <segue destination="n5p-87-1IU" kind="relationship" relationship="viewControllers" id="KYu-3A-sou"/>
-                        <segue destination="3sY-td-oA3" kind="relationship" relationship="viewControllers" id="WZ3-9E-pQO"/>
                         <segue destination="8vc-wg-qvD" kind="relationship" relationship="viewControllers" id="YAV-1Z-GAU"/>
+                        <segue destination="bc0-Ut-oJR" kind="relationship" relationship="viewControllers" id="Dxo-Cw-mCR"/>
+                        <segue destination="3sY-td-oA3" kind="relationship" relationship="viewControllers" id="WZ3-9E-pQO"/>
                     </connections>
                 </tabBarController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="lSZ-hK-xn9" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-136" y="-1106"/>
+            <point key="canvasLocation" x="-776" y="-1310"/>
         </scene>
         <!--Alarm Table View Controller - Alarm Events-->
         <scene sceneID="2nE-uD-4ZD">
@@ -288,7 +288,7 @@
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="7sc-i2-ftK" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="382" y="133"/>
+            <point key="canvasLocation" x="303" y="-1127"/>
         </scene>
         <!--Add Alarm View Controller-->
         <scene sceneID="3Om-Bb-h8P">
@@ -382,7 +382,7 @@ AQABAAEAAQAB//+dkAEA//+PgAAE//+dkAEI//+dkAEMUERUAFBTVABQV1QAUFBUAAAAAAEAAAABA
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="u3G-2Q-Skm" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="826" y="127"/>
+            <point key="canvasLocation" x="822" y="-1127"/>
         </scene>
         <!--Navigation Controller - Alarms-->
         <scene sceneID="ady-LV-oMJ">
@@ -398,7 +398,7 @@ AQABAAEAAQAB//+dkAEA//+PgAAE//+dkAEI//+dkAEMUERUAFBTVABQV1QAUFBUAAAAAAEAAAABA
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="DWG-no-VPc" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-123" y="133"/>
+            <point key="canvasLocation" x="-199" y="-1119"/>
         </scene>
         <!--Map View Controller - Campus Map-->
         <scene sceneID="y4W-mt-vVQ">
@@ -427,7 +427,7 @@ AQABAAEAAQAB//+dkAEA//+PgAAE//+dkAEI//+dkAEMUERUAFBTVABQV1QAUFBUAAAAAAEAAAABA
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="XdU-Oc-A0i" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="561" y="-653"/>
+            <point key="canvasLocation" x="-183" y="391"/>
         </scene>
         <!--Campus Info View Controller - Campus Info-->
         <scene sceneID="0nZ-Xc-vBD">
@@ -475,7 +475,7 @@ AQABAAEAAQAB//+dkAEA//+PgAAE//+dkAEI//+dkAEMUERUAFBTVABQV1QAUFBUAAAAAAEAAAABA
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="kXj-Lh-6ur" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1211" y="-982"/>
+            <point key="canvasLocation" x="-193" y="-394"/>
         </scene>
     </scenes>
     <resources>
@@ -486,12 +486,64 @@ AQABAAEAAQAB//+dkAEA//+PgAAE//+dkAEI//+dkAEMUERUAFBTVABQV1QAUFBUAAAAAAEAAAABA
         <image name="eventsIcon.png" width="30" height="30"/>
         <image name="mapIcon.png" width="30" height="30"/>
     </resources>
+    <classes>
+        <class className="AddAlarmViewController" superclassName="UIViewController">
+            <source key="sourceIdentifier" type="project" relativePath="./Classes/AddAlarmViewController.h"/>
+            <relationships>
+                <relationship kind="action" name="cancel:"/>
+                <relationship kind="action" name="save:"/>
+                <relationship kind="outlet" name="datePicker" candidateClass="UIDatePicker"/>
+                <relationship kind="outlet" name="itemText" candidateClass="UITextField"/>
+            </relationships>
+        </class>
+        <class className="AddressViewController" superclassName="UITableViewController">
+            <source key="sourceIdentifier" type="project" relativePath="./Classes/AddressViewController.h"/>
+        </class>
+        <class className="AlarmTableViewController" superclassName="UITableViewController">
+            <source key="sourceIdentifier" type="project" relativePath="./Classes/AlarmTableViewController.h"/>
+        </class>
+        <class className="CampusInfoViewController" superclassName="UIViewController">
+            <source key="sourceIdentifier" type="project" relativePath="./Classes/CampusInfoViewController.h"/>
+            <relationships>
+                <relationship kind="action" name="segmentControlAction:"/>
+                <relationship kind="outlet" name="webViewGym" candidateClass="UIWebView"/>
+                <relationship kind="outlet" name="webViewLibrary" candidateClass="UIWebView"/>
+                <relationship kind="outlet" name="webViewWave" candidateClass="UIWebView"/>
+            </relationships>
+        </class>
+        <class className="DayViewController" superclassName="UITableViewController">
+            <source key="sourceIdentifier" type="project" relativePath="./Classes/DayViewController.h"/>
+        </class>
+        <class className="EventCell" superclassName="UITableViewCell">
+            <source key="sourceIdentifier" type="project" relativePath="./Classes/EventCell.h"/>
+            <relationships>
+                <relationship kind="outlet" name="location" candidateClass="UILabel"/>
+                <relationship kind="outlet" name="time" candidateClass="UILabel"/>
+                <relationship kind="outlet" name="title" candidateClass="UILabel"/>
+            </relationships>
+        </class>
+        <class className="EventViewController" superclassName="UITableViewController">
+            <source key="sourceIdentifier" type="project" relativePath="./Classes/EventViewController.h"/>
+        </class>
+        <class className="MapViewController" superclassName="UIViewController">
+            <source key="sourceIdentifier" type="project" relativePath="./Classes/MapViewController.h"/>
+            <relationships>
+                <relationship kind="outlet" name="webView" candidateClass="UIWebView"/>
+            </relationships>
+        </class>
+        <class className="NSLayoutConstraint" superclassName="NSObject">
+            <source key="sourceIdentifier" type="project" relativePath="./Classes/NSLayoutConstraint.h"/>
+        </class>
+        <class className="ViewController" superclassName="UIViewController">
+            <source key="sourceIdentifier" type="project" relativePath="./Classes/ViewController.h"/>
+        </class>
+    </classes>
     <simulatedMetricsContainer key="defaultSimulatedMetrics">
         <simulatedStatusBarMetrics key="statusBar"/>
         <simulatedOrientationMetrics key="orientation"/>
         <simulatedScreenMetrics key="destination" type="retina4"/>
     </simulatedMetricsContainer>
     <inferredMetricsTieBreakers>
-        <segue reference="HEd-hJ-oCb"/>
+        <segue reference="FfL-Q2-Fg8"/>
     </inferredMetricsTieBreakers>
 </document>

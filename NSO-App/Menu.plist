@@ -4,7 +4,7 @@
 <array>
 	<dict>
 		<key>title</key>
-		<string>Contact Display</string>
+		<string>Display Contacts</string>
 		<key>description</key>
 		<string>Show a list of contacts.</string>
 	</dict>

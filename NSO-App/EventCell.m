@@ -11,7 +11,6 @@
 @implementation EventCell
 @synthesize time;
 @synthesize title;
-//@synthesize description;
 @synthesize location;
 
 - (id)initWithStyle:(UITableViewCellStyle)style reuseIdentifier:(NSString *)reuseIdentifier

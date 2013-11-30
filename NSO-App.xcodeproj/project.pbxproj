@@ -16,7 +16,6 @@
 		7C62DCF4182AB09B0003AD91 /* MainStoryboard.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7C62DCF2182AB09B0003AD91 /* MainStoryboard.storyboard */; };
 		7C62DCF7182AB09B0003AD91 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 7C62DCF6182AB09B0003AD91 /* ViewController.m */; };
 		7C62DD0F182ABCDE0003AD91 /* CampusInfoViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 7C62DD0E182ABCDE0003AD91 /* CampusInfoViewController.m */; };
-		7C62DD14182ABFA00003AD91 /* README in Resources */ = {isa = PBXBuildFile; fileRef = 7C62DD13182ABFA00003AD91 /* README */; };
 		7C62DD17182AC32A0003AD91 /* Schedule.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 7C62DD15182AC32A0003AD91 /* Schedule.xcdatamodeld */; };
 		7C653645183D29B70009953E /* MapViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 7C653644183D29B70009953E /* MapViewController.m */; };
 		7C653661183D38520009953E /* Event.m in Sources */ = {isa = PBXBuildFile; fileRef = 7C653660183D38520009953E /* Event.m */; };
@@ -65,7 +64,6 @@
 		7C62DCF6182AB09B0003AD91 /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
 		7C62DD0D182ABCDE0003AD91 /* CampusInfoViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CampusInfoViewController.h; sourceTree = "<group>"; };
 		7C62DD0E182ABCDE0003AD91 /* CampusInfoViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CampusInfoViewController.m; sourceTree = "<group>"; };
-		7C62DD13182ABFA00003AD91 /* README */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = README; sourceTree = "<group>"; };
 		7C62DD16182AC32A0003AD91 /* Schedule.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; name = Schedule.xcdatamodel; path = "NSO-App/Schedule.xcdatamodeld/Schedule.xcdatamodel"; sourceTree = SOURCE_ROOT; };
 		7C653643183D29B70009953E /* MapViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MapViewController.h; sourceTree = "<group>"; };
 		7C653644183D29B70009953E /* MapViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MapViewController.m; sourceTree = "<group>"; };
@@ -157,31 +155,15 @@
 		7C62DCE0182AB09B0003AD91 /* NSO-App */ = {
 			isa = PBXGroup;
 			children = (
-				7C653662183D38530009953E /* Day.h */,
-				7C653663183D38530009953E /* Day.m */,
-				7C65365F183D38520009953E /* Event.h */,
-				7C653660183D38520009953E /* Event.m */,
+				819C695B18493E93001E9844 /* Alarms */,
+				819C695C18493EA8001E9844 /* ContactList */,
+				819C695E18493EC6001E9844 /* CampusMap */,
+				819C695918493E7A001E9844 /* Events */,
+				819C695D18493EB6001E9844 /* CampusInfo */,
 				7C62DCE9182AB09B0003AD91 /* AppDelegate.h */,
 				7C62DCEA182AB09B0003AD91 /* AppDelegate.m */,
-				818889661843CAC6008FCD13 /* AddAlarmViewController.h */,
-				818889671843CAC6008FCD13 /* AddAlarmViewController.m */,
-				818889691843CC06008FCD13 /* AlarmTableViewController.h */,
-				8188896A1843CC06008FCD13 /* AlarmTableViewController.m */,
 				7C62DD15182AC32A0003AD91 /* Schedule.xcdatamodeld */,
 				7C62DCF2182AB09B0003AD91 /* MainStoryboard.storyboard */,
-				81D69FC3183E559A00A4B8EE /* AddressViewController.h */,
-				81D69FC4183E559A00A4B8EE /* AddressViewController.m */,
-				7CC71906183D6410007F7E52 /* EventViewController.h */,
-				7CC71907183D6410007F7E52 /* EventViewController.m */,
-				968C7E1E184288540040DDE9 /* EventCell.h */,
-				968C7E1F184288540040DDE9 /* EventCell.m */,
-				7CC71902183D63EB007F7E52 /* DayViewController.h */,
-				7CC71903183D63EB007F7E52 /* DayViewController.m */,
-				7C653643183D29B70009953E /* MapViewController.h */,
-				7C653644183D29B70009953E /* MapViewController.m */,
-				7C62DD0D182ABCDE0003AD91 /* CampusInfoViewController.h */,
-				7C62DD0E182ABCDE0003AD91 /* CampusInfoViewController.m */,
-				7C62DD13182ABFA00003AD91 /* README */,
 				7C62DCF5182AB09B0003AD91 /* ViewController.h */,
 				7C62DCF6182AB09B0003AD91 /* ViewController.m */,
 				7C62DCE1182AB09B0003AD91 /* Supporting Files */,
@@ -196,20 +178,75 @@
 				7C8DEEEB18451AF100D02E66 /* Default-568h@2x.png */,
 				7C8DEEE918451AA500D02E66 /* Default@2x.png */,
 				81D566A518469B9D00A95836 /* campusMap.pdf */,
-				81D5669C184694CE00A95836 /* menu2.pdf */,
 				7C8DEEE718451A2700D02E66 /* Default.png */,
-				81D5669B184694CE00A95836 /* menu1.pdf */,
 				7C8DEEE51845171900D02E66 /* Orientation-badge.jpg */,
 				7C62DCE2182AB09B0003AD91 /* NSO-App-Info.plist */,
 				81D69FCD183E58D600A4B8EE /* Menu.plist */,
 				7C62DCE3182AB09B0003AD91 /* InfoPlist.strings */,
 				7C62DCE6182AB09B0003AD91 /* main.m */,
 				7C62DCE8182AB09B0003AD91 /* NSO-App-Prefix.pch */,
+				81D5669B184694CE00A95836 /* menu1.pdf */,
+				81D5669C184694CE00A95836 /* menu2.pdf */,
 				810FA63A1839B0640094E771 /* campusMap1.pdf */,
 				816E7D3E183DB19600266F64 /* library.html */,
 				816E7D3B183DB18700266F64 /* wave.html */,
 			);
 			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		819C695918493E7A001E9844 /* Events */ = {
+			isa = PBXGroup;
+			children = (
+				7CC71906183D6410007F7E52 /* EventViewController.h */,
+				7CC71907183D6410007F7E52 /* EventViewController.m */,
+				968C7E1E184288540040DDE9 /* EventCell.h */,
+				968C7E1F184288540040DDE9 /* EventCell.m */,
+				7CC71902183D63EB007F7E52 /* DayViewController.h */,
+				7CC71903183D63EB007F7E52 /* DayViewController.m */,
+				7C653662183D38530009953E /* Day.h */,
+				7C653663183D38530009953E /* Day.m */,
+				7C65365F183D38520009953E /* Event.h */,
+				7C653660183D38520009953E /* Event.m */,
+			);
+			name = Events;
+			sourceTree = "<group>";
+		};
+		819C695B18493E93001E9844 /* Alarms */ = {
+			isa = PBXGroup;
+			children = (
+				818889661843CAC6008FCD13 /* AddAlarmViewController.h */,
+				818889671843CAC6008FCD13 /* AddAlarmViewController.m */,
+				818889691843CC06008FCD13 /* AlarmTableViewController.h */,
+				8188896A1843CC06008FCD13 /* AlarmTableViewController.m */,
+			);
+			name = Alarms;
+			sourceTree = "<group>";
+		};
+		819C695C18493EA8001E9844 /* ContactList */ = {
+			isa = PBXGroup;
+			children = (
+				81D69FC3183E559A00A4B8EE /* AddressViewController.h */,
+				81D69FC4183E559A00A4B8EE /* AddressViewController.m */,
+			);
+			name = ContactList;
+			sourceTree = "<group>";
+		};
+		819C695D18493EB6001E9844 /* CampusInfo */ = {
+			isa = PBXGroup;
+			children = (
+				7C62DD0D182ABCDE0003AD91 /* CampusInfoViewController.h */,
+				7C62DD0E182ABCDE0003AD91 /* CampusInfoViewController.m */,
+			);
+			name = CampusInfo;
+			sourceTree = "<group>";
+		};
+		819C695E18493EC6001E9844 /* CampusMap */ = {
+			isa = PBXGroup;
+			children = (
+				7C653643183D29B70009953E /* MapViewController.h */,
+				7C653644183D29B70009953E /* MapViewController.m */,
+			);
+			name = CampusMap;
 			sourceTree = "<group>";
 		};
 		81D566A218469A0D00A95836 /* Icons */ = {
@@ -278,7 +315,6 @@
 			files = (
 				7C62DCE5182AB09B0003AD91 /* InfoPlist.strings in Resources */,
 				7C62DCF4182AB09B0003AD91 /* MainStoryboard.storyboard in Resources */,
-				7C62DD14182ABFA00003AD91 /* README in Resources */,
 				810FA6391839AF140094E771 /* campusInfo.png in Resources */,
 				810FA63B1839B0640094E771 /* campusMap1.pdf in Resources */,
 				81A67894183D320C0019160F /* mapIcon.png in Resources */,

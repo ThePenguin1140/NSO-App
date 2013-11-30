@@ -9,5 +9,7 @@
 #import <UIKit/UIKit.h>
 
 @interface MapViewController : UIViewController
+
 @property (strong, nonatomic) IBOutlet UIWebView *webView;
+
 @end

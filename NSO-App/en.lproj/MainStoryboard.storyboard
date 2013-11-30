@@ -377,7 +377,7 @@ AQABAAEAAQAB//+dkAEA//+PgAAE//+dkAEI//+dkAEMUERUAFBTVABQV1QAUFBUAAAAAAEAAAABA
                     </view>
                     <connections>
                         <outlet property="datePicker" destination="0vY-sT-H7w" id="T8F-VK-LOV"/>
-                        <outlet property="itemText" destination="D52-19-1hK" id="B5B-vi-3uD"/>
+                        <outlet property="description" destination="D52-19-1hK" id="RIJ-TX-DFu"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="u3G-2Q-Skm" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -493,7 +493,7 @@ AQABAAEAAQAB//+dkAEA//+PgAAE//+dkAEI//+dkAEMUERUAFBTVABQV1QAUFBUAAAAAAEAAAABA
                 <relationship kind="action" name="cancel:"/>
                 <relationship kind="action" name="save:"/>
                 <relationship kind="outlet" name="datePicker" candidateClass="UIDatePicker"/>
-                <relationship kind="outlet" name="itemText" candidateClass="UITextField"/>
+                <relationship kind="outlet" name="description" candidateClass="UITextField"/>
             </relationships>
         </class>
         <class className="AddressViewController" superclassName="UITableViewController">

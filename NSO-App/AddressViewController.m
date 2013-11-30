@@ -9,11 +9,14 @@
 #import "AddressViewController.h"
 #import <AddressBook/AddressBook.h>
 #import <AddressBookUI/AddressBookUI.h>
+
+// use enums to define data types which will take only some specific values
+// makes switch statement more readable
 enum TableRowSelected
 {
-	kUIDisplayPickerRow = 0,
-	kUICreateNewContactRow,
-	kUIDisplayContactRow,
+	displayPickerRow = 0,
+	createNewContactRow,
+	displayContactRow,
 };
 
 @interface AddressViewController () < ABPeoplePickerNavigationControllerDelegate,ABPersonViewControllerDelegate,
@@ -30,9 +33,7 @@ ABNewPersonViewControllerDelegate>
 - (id)initWithStyle:(UITableViewStyle)style
 {
     self = [super initWithStyle:style];
-    if (self) {
-        self.title = @"Contact List";
-    }
+  
     return self;
 }
 
@@ -47,7 +48,7 @@ ABNewPersonViewControllerDelegate>
 	self.menuArray = [NSMutableArray arrayWithContentsOfFile:plistPath];
     [self.tableView reloadData];
 }
-#pragma mark Table view methods
+// returns the number of contacts in the table
 - (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView
 {
 	return [self.menuArray count];
@@ -63,24 +64,23 @@ ABNewPersonViewControllerDelegate>
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
 {
     static NSString *CellIdentifier = @"Cell";
-    UITableViewCell *aCell = [tableView dequeueReusableCellWithIdentifier:CellIdentifier];
+    UITableViewCell *contactCell = [tableView dequeueReusableCellWithIdentifier:CellIdentifier];
     
-    aCell = [[UITableViewCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:CellIdentifier];
-    aCell.textLabel.textAlignment = NSTextAlignmentCenter;
-    
-	
-	aCell.textLabel.text = [[self.menuArray objectAtIndex:indexPath.section] valueForKey:@"title"];
-	return aCell;
+    contactCell = [[UITableViewCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:CellIdentifier];
+    contactCell.textLabel.textAlignment = NSTextAlignmentCenter;
+    //displays the title from the Menu.plst
+	contactCell.textLabel.text = [[self.menuArray objectAtIndex:indexPath.section] valueForKey:@"title"];
+	return contactCell;
 }
 
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
 {
 	switch (indexPath.section)
 	{
-		case kUIDisplayPickerRow:
+		case displayPickerRow:
 			[self showPeoplePickerController];
 			break;
-		case kUICreateNewContactRow:
+		case createNewContactRow:
 			[self showNewPersonViewController];
 			break;
             
@@ -102,7 +102,6 @@ ABNewPersonViewControllerDelegate>
                                [NSNumber numberWithInt:kABPersonEmailProperty],
                                [NSNumber numberWithInt:kABPersonBirthdayProperty], nil];
 	
-	
 	picker.displayedProperties = displayedItems;
 	// Show the picker
     [self presentViewController:picker animated:YES completion:nil];
@@ -110,7 +109,7 @@ ABNewPersonViewControllerDelegate>
 
 
 #pragma mark Create a new person
-// Called when users tap "Create New Contact" in the application. Allows users to create a new contact.
+// allows user to create a new contact
 -(void)showNewPersonViewController
 {
 	ABNewPersonViewController *picker = [[ABNewPersonViewController alloc] init];
@@ -120,8 +119,6 @@ ABNewPersonViewControllerDelegate>
     [self presentViewController:navigation animated:YES completion:nil];
 }
 
-
-
 #pragma mark ABPeoplePickerNavigationControllerDelegate methods
 // Displays the information of a selected person
 - (BOOL)peoplePickerNavigationController:(ABPeoplePickerNavigationController *)peoplePicker shouldContinueAfterSelectingPerson:(ABRecordRef)person
@@ -129,21 +126,18 @@ ABNewPersonViewControllerDelegate>
 	return YES;
 }
 
-// Dismisses the people picker and shows the application when users tap Cancel.
+// cancels request of user to display a contact
 - (void)peoplePickerNavigationControllerDidCancel:(ABPeoplePickerNavigationController *)peoplePicker;
 {
 	[self dismissViewControllerAnimated:YES completion:NULL];
 }
 
-
-
 #pragma mark ABNewPersonViewControllerDelegate methods
-// Dismisses the new-person view controller.
+// used when user cancels creating a new user
 - (void)newPersonViewController:(ABNewPersonViewController *)newPersonViewController didCompleteWithNewPerson:(ABRecordRef)person
 {
 	[self dismissViewControllerAnimated:YES completion:NULL];
 }
-
 
 #pragma mark Memory management
 - (void)didReceiveMemoryWarning
@@ -151,14 +145,5 @@ ABNewPersonViewControllerDelegate>
     // Release the view if it doesn't have a superview.
     [super didReceiveMemoryWarning];
 }
-
-- (void)dealloc
-{
-    if(_addressBook)
-    {
-        CFRelease(_addressBook);
-    }
-}
-
 
 @end

@@ -27,13 +27,7 @@
 - (void)viewDidLoad
 {
     [super viewDidLoad];
-	// Do any additional setup after loading the view.
-    
-    //BE SURE TO LOAD THE FIRST HTML FILE INTO THE WEBVIEW
-    
-    //Implement path getting things where the path to html file is
-    // relative!
-    
+    // loads the gym view on first selection of this tab because it is the first in segmented control
     [webViewGym loadRequest:[NSURLRequest requestWithURL: [NSURL URLWithString:@"http://ar.upei.ca/hours-operation"]]];
     webViewGym.scalesPageToFit = YES;
 }
@@ -43,55 +37,40 @@
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
 }
-
+// segmented controller used to display the campus information
 - (IBAction)segmentControlAction:(id)sender {
     UISegmentedControl *segControl = (UISegmentedControl *)sender;
-    
+    // gets the value of the segmented controller
     int selectedValue = segControl.selectedSegmentIndex;
     switch (selectedValue) {
+        // display the gym information
+        // uses web view to display the online upei gym website
         case 0:
         {
-            NSLog(@"1");
-            
             [webViewGym loadRequest:[NSURLRequest requestWithURL: [NSURL URLWithString:@"http://ar.upei.ca/hours-operation"]]];
             webViewGym.scalesPageToFit = YES;
-
-        }
             break;
+        }
+        // display the library information
+        // uses web view to display an offline html file that is included
         case 1:
         {
-           
             NSURL *url = [[NSBundle mainBundle] URLForResource:@"library" withExtension:@"html"];
             NSString *html = [NSString stringWithContentsOfURL:url encoding:NSUTF8StringEncoding error:nil];
-            
             [webViewLibrary loadHTMLString:html baseURL:[url URLByDeletingLastPathComponent]];
-             /*
-            NSURLRequest *requestObj = [NSURLRequest requestWithURL:[[NSBundle mainBundle] URLForResource:@"library" withExtension:@"html"]];
-            [webViewLibrary loadRequest:requestObj];
-            
-            NSLog(@"2");
-            
-            NSURL *htmlFile = [NSURL fileURLWithPath:[[NSBundle mainBundle] pathForResource:@"library" ofType:@"html"] isDirectory:NO];
-
-            [webViewLibrary loadRequest:[NSURLRequest requestWithURL: htmlFile]];
-            webViewLibrary.scalesPageToFit = YES;
-*/
             break;
         }
+        // display the wave information
+        // uses web view to display an offline html file that is included and a pdf of the wave menu that is include in the html file
         case 2:
         {
             NSURL *url = [[NSBundle mainBundle] URLForResource:@"wave" withExtension:@"html"];
             NSString *html = [NSString stringWithContentsOfURL:url encoding:NSUTF8StringEncoding error:nil];
             [webViewLibrary loadHTMLString:html baseURL:[url URLByDeletingLastPathComponent]];
-
             break;
         }
-       
-
-            
         default:
             break;
     }
 }
-
 @end

@@ -37,12 +37,7 @@
 {
     [super viewDidLoad];
 
-    // Uncomment the following line to preserve selection between presentations.
-    // self.clearsSelectionOnViewWillAppear = NO;
- 
-    // Uncomment the following line to display an Edit button in the navigation bar for this view controller.
-    // self.navigationItem.rightBarButtonItem = self.editButtonItem;
-}
+    }
 
 - (void)didReceiveMemoryWarning
 {
@@ -77,11 +72,6 @@
     
     // retrieves the cells contents
     NSArray *subview = [[cell contentView] subviews];
-    // for cell content debugging
-    /*
-    for (UILabel *a in subview)
-        NSLog(@"CELL CONTENT BEFORE LABEL %@",a.text);
-     */
     
     //creates a new UILabelView
     // Frame origin is at precalculated coordinates,
@@ -107,7 +97,6 @@
     
     //set the cells text and subtitle
     cell.title.text = event.eventTitle;
-    //NSLog(@"Cell title %@",cell.title.text);
     cell.time.text = event.eventTime;
     cell.location.text = event.eventLocation;
     // if the cell is dequed and the description label exists in the cell
@@ -115,13 +104,8 @@
     if([subview count]==4)
         [[subview objectAtIndex:3] removeFromSuperview];
     description.text = event.eventDescription;
-    //NSLog(@"Cell description %@", description.text);
+
     [[cell contentView]addSubview:description];
-    // for debug
-    /*
-    for (UILabel *a in subview)
-        NSLog(@"CELL CONTENT AFTER LABEL %@",a.text);
-    */
     return cell;
 }
 
@@ -147,57 +131,6 @@
     // plus 80 pixles for buffer
     CGFloat descriptionHeight = [self tableView:tableView heightForLabelAtIndexPath:indexPath];
     return 80 + descriptionHeight;
-}
-/*
-// Override to support conditional editing of the table view.
-- (BOOL)tableView:(UITableView *)tableView canEditRowAtIndexPath:(NSIndexPath *)indexPath
-{
-    // Return NO if you do not want the specified item to be editable.
-    return YES;
-}
-*/
-
-/*
-// Override to support editing the table view.
-- (void)tableView:(UITableView *)tableView commitEditingStyle:(UITableViewCellEditingStyle)editingStyle forRowAtIndexPath:(NSIndexPath *)indexPath
-{
-    if (editingStyle == UITableViewCellEditingStyleDelete) {
-        // Delete the row from the data source
-        [tableView deleteRowsAtIndexPaths:@[indexPath] withRowAnimation:UITableViewRowAnimationFade];
-    }   
-    else if (editingStyle == UITableViewCellEditingStyleInsert) {
-        // Create a new instance of the appropriate class, insert it into the array, and add a new row to the table view
-    }   
-}
-*/
-
-/*
-// Override to support rearranging the table view.
-- (void)tableView:(UITableView *)tableView moveRowAtIndexPath:(NSIndexPath *)fromIndexPath toIndexPath:(NSIndexPath *)toIndexPath
-{
-}
-*/
-
-/*
-// Override to support conditional rearranging of the table view.
-- (BOOL)tableView:(UITableView *)tableView canMoveRowAtIndexPath:(NSIndexPath *)indexPath
-{
-    // Return NO if you do not want the item to be re-orderable.
-    return YES;
-}
-*/
-
-- (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
-{
-    /*
-    UITextView *desField = [[UITextView alloc] initWithFrame:CGRectMake(110, 10, 185, 30)];
-    [desField setTextColor:[UIColor blackColor]];
-    [desField setBackgroundColor:[UIColor whiteColor]];
-    [desField setTextAlignment:NSTextAlignmentLeft];
-    [desField setText:@"This is a test string"];
-    UITableViewCell *cell = [[self tableView]cellForRowAtIndexPath:indexPath];
-    [[cell contentView] addSubview:desField];
-    */
 }
 
 - (AppDelegate *)appDelegate {

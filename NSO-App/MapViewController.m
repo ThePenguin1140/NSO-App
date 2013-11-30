@@ -13,6 +13,7 @@
 @end
 
 @implementation MapViewController
+
 @synthesize webView;
 
 - (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil

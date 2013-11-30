@@ -9,8 +9,10 @@
 #import <UIKit/UIKit.h>
 
 @interface AddAlarmViewController : UIViewController <UITextFieldDelegate>
-@property (weak, nonatomic) IBOutlet UITextField *itemText;
+
 @property (weak, nonatomic) IBOutlet UIDatePicker *datePicker;
+@property (weak, nonatomic) IBOutlet UITextField *description;
+
 - (IBAction)save:(id)sender;
 - (IBAction)cancel:(id)sender;
 

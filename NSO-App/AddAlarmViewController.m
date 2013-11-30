@@ -28,7 +28,7 @@
     [super viewDidLoad];
 	// Do any additional setup after loading the view.
     
-    self.itemText.delegate = self;
+    self.description.delegate = self;
 }
 
 - (void)didReceiveMemoryWarning
@@ -36,9 +36,9 @@
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
 }
-
+// saves an alarm
 - (IBAction)save:(id)sender {
-    [self.itemText resignFirstResponder];
+    [self.description resignFirstResponder];
     
     // Get the current date
     NSDate *pickerDate = [self.datePicker date];
@@ -46,11 +46,10 @@
     // Schedule the notification
     UILocalNotification* localNotification = [[UILocalNotification alloc] init];
     localNotification.fireDate = pickerDate;
-    localNotification.alertBody = self.itemText.text;
-    localNotification.alertAction = @"Show me the item";
+    // displays the entered description
+    localNotification.alertBody = self.description.text;
+    // sets the timezone
     localNotification.timeZone = [NSTimeZone defaultTimeZone];
-    localNotification.applicationIconBadgeNumber = [[UIApplication sharedApplication] applicationIconBadgeNumber] + 1;
-    
     [[UIApplication sharedApplication] scheduleLocalNotification:localNotification];
     
     // Request to reload table view data
@@ -59,15 +58,15 @@
     // Dismiss the view controller
     [self dismissViewControllerAnimated:YES completion:nil];
 }
-
+// cancels adding an alarm
 - (IBAction)cancel:(id)sender {
     [self dismissViewControllerAnimated:YES completion:nil];
 
 }
-
+// resigns first responder so the keyboard disappears 
 - (BOOL)textFieldShouldReturn:(UITextField *)textField
 {
-    [self.itemText resignFirstResponder];
+    [self.description resignFirstResponder];
     return NO;
 }
 @end
